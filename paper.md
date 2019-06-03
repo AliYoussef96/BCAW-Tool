@@ -15,15 +15,21 @@ date: June 3, 2019
 ---
 # Summary
 
-The redundancy in the genetic code means that apart from methionine and tryptophan, an amino acid is encoded by at least two codons. Different codons for the same amino acid are termed synonymous codons. Synonymous codon usage is strongly influenced by evolutionary forces namely, selection and mutation and may vary strongly within or among organisms (Hershberg and Petrov 2008) The preference of specific codons over others contributes to this variation and this phenomenon is called codon usage bias (CUB). Studies have indicated that CUB affects translation elongation and contributes to rapid and accurate protein synthesis (Quax et al. 2015). Furthermore, combined mutation-drift-selection models have been effective in interpreting the implications of CUB (Hershberg and Petrov 2008). 
+The redundancy in the genetic code means that apart from methionine and tryptophan, an amino acid is encoded by at least two codons. Different codons for the same amino acid are termed synonymous codons. Synonymous codon usage is strongly influenced by evolutionary forces namely, selection and mutation and may vary strongly within or among organisms (Hershberg and Petrov 2008) The preference of specific codons over others contributes to this variation and this phenomenon is called codon usage bias (CUB).
+
+Studies have indicated that CUB affects translation elongation and contributes to rapid and accurate protein synthesis (Quax et al. 2015). Furthermore, combined mutation-drift-selection models have been effective in interpreting the implications of CUB (Hershberg and Petrov 2008). 
+
 Many measurements have been developed to analysis and study CUB; effective number of codons ( ENc ) (Wright 1990), codon adaptation index ( CAI )  (Sharpl and Li 1987), relative synonymous codon usage ( RSCU ) (Sharp and Li 1987) and, translational selection index ( P2-index ) (Wang et al. 2018). Also, statistical analysis has been used to investigate the effect of different factors as selection and mutation on shaping CUB as; Correspondence analysis (Drosophila 1989), Parity Rule 2 -plot Analysis (Sueoka 2001) and, Neutrality Plot (Song et al. 2017; Wang et al. 2018)
+
 Various tools are used to analyze and measure CUB, such as CodonW and ACUA, they are widely used but with no graphs outputs and lack some important measurements and plots for CUB analysis that are widely used in previous studies as P2-index (Wang et al. 2018), hydrophilicity and aromaticity (Choudhury, Uddin, and Chakraborty 2018), Parity Rule 2 -plot (Sueoka 2001) and, Neutrality Plot (Chen et al. 2017).
- BCAW Tool was developed in such a way to include the indices mentioned above, plots, and additional statistical reports as well as to be automated.
+
+BCAW Tool was developed in such a way to include the indices mentioned above, plots, and additional statistical reports as well as to be automated.
  
 # Implementation
 
 BCAW Tool was developed using python 3.7 with build in and third-party packages (Lee 2018).
 The usage of BCAW Tool is made to be very easy where users have only to input a fasta format file containing genes to be analyzed, and a bunch of analysis will be performed. For CAI estimation a reference genes set should be provided, two options may be used 1- reference genes set given by the user or 2- an auto option where BCAW Tool generates genes reference set using 10% of genes have the lowest ENc values ( highest biased genes ).
+
 The expected outputs are 23 different files, 8 are in comma-separated values ( CSV ) format, 4 are in text format and, 11 graphs in portable network graphics ( PNG ) format. The equations used in the tool and the expected outputs are reported in a tutorial file attached with BCAW tool files.
 
 # References
