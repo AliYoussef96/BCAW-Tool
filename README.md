@@ -26,6 +26,7 @@ This software was designed by python 3.7 if it will be used as an executable fil
 To report bugs or seek support please open an issue on this repository. Contributions to the software are welcome; please open an issue for further discussion.
 
 ## How to Use BCAW tool?
+Unzip the file you downloaded, open the software from BCAWT shortcut icon then ; 
 
 The first message from the tool will be:
 ```
