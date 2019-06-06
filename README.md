@@ -93,7 +93,7 @@ The third one:
 ```
 Using this option the BCAW tool will build reference genes set and use it.
 
-The last step is to enter a name where the results will be saved
+### The last step is to enter a name where the results will be saved
 ```
 Folder Name
 ```
