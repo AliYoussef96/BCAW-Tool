@@ -28,7 +28,7 @@ To report bugs or seek support please open an issue on this repository. Contribu
 ## How to Use BCAW tool?
 Unzip the file you downloaded, open the software from BCAWT shortcut icon then ; 
 
-### The first message from the tool will be:
+**The first message from the tool will be:**
 ```
 -s or -m then Enter the name of the file:
 ```
@@ -57,7 +57,7 @@ Example:
 ```
 -m D:\x\y\BCAW Tool\sample_input_files\ Genomes
 ```
-### The second message from the tool will be:
+**The second message from the tool will be:**
 ```
 -s or -m Enter the name of the reference gene set file or -Auto:
 ```
@@ -93,7 +93,7 @@ The third one:
 ```
 Using this option the BCAW tool will build reference genes set and use it.
 
-### The last step is to enter a name where the results will be saved
+**The last step is to enter a name where the results will be saved**
 ```
 Folder Name
 ```
