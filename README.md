@@ -50,7 +50,9 @@ The second one:
 -m FileName
 ```
 This time FileName refers to a path of ( text ) format file contains paths for ( fasta ) files containing genes to be analyzed for different organisms.
+
 Note: enter filename without ( .txt )
+
 Example:
 ```
 -m D:\x\y\BCAW Tool\sample_input_files\ Genomes
@@ -65,8 +67,10 @@ The first one:
 ```
 -s FileName_reference
 ```
-FileName_reference, refers to a path of ( fasta ) format file contains the reference genes set user want to be analyzed by. 
+FileName_reference, refers to a path of ( fasta ) format file contains the reference genes. 
+
 Note: enter FileName_reference without ( .fasta )
+
 Example:
 ```
 -s D:\x\y\BCAW Tool\sample_input_files\Escherichia coli reference genes
@@ -75,8 +79,10 @@ The second one:
 ```
 -m FileName reference genes
 ```
-This time FileName_reference refers to a path of ( text ) format file contains paths for ( fasta ) files contains the reference genes set user want to be analyzed by.
+This time FileName_reference refers to a path of ( text ) format file contains paths for ( fasta ) files contains the reference genes.
+
 Note: enter filename without ( .txt )
+
 Example:
 ```
 -m D:\x\y\BCAW Tool\sample_input_files\ Genomes reference genes
@@ -91,5 +97,5 @@ The last step is to enter a name where the results will be saved
 ```
 Folder Name
 ```
-Note: The Folder will be created inside the Result folder shortcut founded with others BCAW tool folders.
+Note: The Folder will be created inside the Result folder shortcut.
 Now the user has to wait until the BCAW tool finish the heavy work.
