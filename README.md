@@ -107,3 +107,8 @@ Folder Name
 ```
 Note: The Folder will be created inside the Result folder shortcut.
 Now the user has to wait until the BCAW tool finish the heavy work.
+
+## Expected Output files
+
+![Table 1: Expected Output files](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png)
+
