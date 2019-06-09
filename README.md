@@ -8,7 +8,7 @@ BCAW Tool manages a complete automated workflow to analysis the codon usage bias
 
 This software was designed by python 3.7 if it will be used as an executable application on Windows operating system no need for any dependencies.
 
-**If the source code will be used, these packages must be installed:
+**If the source code will be used, these packages must be installed:**
 
 1- Biopython
 
@@ -23,7 +23,7 @@ This software was designed by python 3.7 if it will be used as an executable app
 6- numpy
 
 ## Installation Instructions
-**To run as an executable application:
+**To run as an executable application:**
 
 1- Download (BCAW Tool.zip) file available at: https://sourceforge.net/projects/bcaw-tool/
 
@@ -33,7 +33,7 @@ This software was designed by python 3.7 if it will be used as an executable app
 
 4- Run the tool from BCAW tool.exe shortcut icon.
 
-**To run as python application from the source code:
+**To run as python application from the source code:**
 
 1- Download the source code folder available in this repository ( You must expect to find 11 python files there ).
 
@@ -45,7 +45,7 @@ This software was designed by python 3.7 if it will be used as an executable app
 To report bugs or seek support please open an issue on this repository. Contributions to the software are welcome; please open an issue for further discussion.
 
 ## How to Use BCAW tool?
-Unzip the file you downloaded, open the software from BCAWT shortcut icon then ; 
+Unzip the file you downloaded, run the tool from BCAWT.exe shortcut icon then ; 
 
 **The first message from the tool will be:**
 ```
