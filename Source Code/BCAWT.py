@@ -1,26 +1,3 @@
-#does NOT deal with ambiguous nucleotides.
-
-############## STEP 1 ( INDEX )###
-##################################
-#0 GC,AT, GC1,GC2, GC12, GC3 , A3, T3, C3, G3,  ####
-#1 CAI ####
-#2 ENc  ####
-#3 RSCU  #####
-#4 p2 index ####
-#5 optimized codon
-
-############## STEP 2 ( stat )###
-##################################
-# stat analysis ( non pramtic stat )
-
-############## STEP 3 ( plot )###
-##################################
-#5 plots
-    #5.1 GC12 Vs. GC3 plot
-    #5.2 ENc plot
-    #5.3 PR plot
-    #5.4 COA-RSCU
-    #5.5 GC12 Vs. GC3
 
 import Bio
 from Bio import SeqIO
@@ -31,51 +8,72 @@ from Bio.Data import CodonTable
 from Bio.Alphabet import generic_dna
 import pandas as pd
 from pandas import DataFrame
-import GC123
-import ATCG3
-import ENc
+from BCAWT import GC123
+from BCAWT import ATCG3
+from BCAWT import ENc
 from CAI import CAI
-import RSCU
 import scipy
 from scipy import stats
-import PR2_plot_data
-import P2_index
+from BCAWT import PR2_plot_data
+from BCAWT import P2_index
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-import CA_RSCU
-import CA
+from BCAWT import CA_RSCU
+from BCAWT import CA
 from Bio.Data import CodonTable
-import Optimal_codon_corr_method
+from BCAWT import Optimal_codon_corr_method
 import scipy.optimize as opt
 import warnings
-
 import time
-import GRAVY_AROMO
+from BCAWT  import GRAVY_AROMO
+import sys
 warnings.filterwarnings("ignore", category=RuntimeWarning)
-
 #### the expected input are CDS
 #input needed
     #1- fasta file for CDS need to be analyze ( -s for single fasta -m for multifily))
     #2- fasta file for refrence set
 
 ########main file
+def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=None,fasta = False,txt=False,Auto=False):
+    """
+    BCAWT ( Bio Codon Analysis Workflow Tool ), it manages a complete workflow to analysis
+    the codon usage bias for genes and genomes of any organism..
 
-for _ in range(1000):
+    Args:
 
-    #try:
-    start = time.time()
+        input_the_main_fasta_file (str): fasta file contains DNA sequence ( don't enter it with .fasta )
+        or text file contains paths for fasta files ( don't enter it with .txt )
+        save_folder_name (str): folder name where the result will be saved
+        input_the_ref_fasta_file (str): fasta file contains reference DNA sequence, default = None
+        fasta (bool): default = False, if the first arg (input_the_main_fasta_file) is text file.
+        txt (bool): default = False, if the first arg (input_the_main_fasta_file) is fasta file.
+        Auto (bool): default = False, if input_the_ref_fasta_file not None.
+
+    Notes:
+        - fasta (bool): should be = True when the first arg (input_the_main_fasta_file) is fasta file.
+		
+        - txt (bool): should be = True when the first arg (input_the_main_fasta_file) is text file.
+		
+        - Auto (bool): should be = True to auto-generate a reference set, when arg (input_the_ref_fasta_file) not available ( = None )
+
+    Returns:
+       github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png
+
+
+    """
+
 
     file_name_list = []
-    input_the_main_fasta_file  = input("-s or -m then Enter the name of the file: ")
-    if "-s" in input_the_main_fasta_file:
-        input_the_main_fasta_file = input_the_main_fasta_file.replace("-s",'')
+    #input_the_main_fasta_file  = input("-s or -m then Enter the name of the file: ")
+    if fasta and fasta == True:
+        #input_the_main_fasta_file = input_the_main_fasta_file.replace("-s",'')
         input_the_main_fasta_file = input_the_main_fasta_file.lstrip()
         #input_the_main_fasta_file = input_the_main_fasta_file.replace('\\','')
         input_the_main_fasta_file = input_the_main_fasta_file + ".fasta"
         file_name_list.append(input_the_main_fasta_file)
-    elif "-m" in input_the_main_fasta_file:
-        input_the_main_fasta_file = input_the_main_fasta_file.replace("-m",'')
+    elif txt and txt == True:
+        #input_the_main_fasta_file = input_the_main_fasta_file.replace("-m",'')
         input_the_main_fasta_file = input_the_main_fasta_file.lstrip()
         input_the_main_fasta_file = input_the_main_fasta_file + ".txt"
         with open(input_the_main_fasta_file,'r') as r:
@@ -86,14 +84,11 @@ for _ in range(1000):
             file_name_list.append(i)
     else:
         print  ('"Something going wrong!!!, Please review the tutorial and your input and try again"')
-        continue
+        return
     ############ref file
     file_name_ref_list = []
-    input_the_ref_fasta_file = input("-s or -m Enter the name of the reference gene set file or -Auto: ")
-    if "-s" in input_the_ref_fasta_file:
-        input_the_ref_fasta_file = input_the_ref_fasta_file.replace("-s",'')
+    if input_the_ref_fasta_file != None and fasta == True and Auto == False:
         input_the_ref_fasta_file = input_the_ref_fasta_file.lstrip()
-        # input_the_ref_fasta_file = input_the_ref_fasta_file.replace('\\','')
         input_the_ref_fasta_file = input_the_ref_fasta_file + ".fasta"
 
 
@@ -110,8 +105,7 @@ for _ in range(1000):
             all_ref_seq.append( seq_main_seq_modifi_ )
 
 
-    elif "-m" in input_the_ref_fasta_file:
-        input_the_ref_fasta_file = input_the_ref_fasta_file.replce("-m",'')
+    elif input_the_ref_fasta_file != None and txt == True and Auto == False:
         input_the_ref_fasta_file = input_the_ref_fasta_file.lstrip()
         input_the_ref_fasta_file = input_the_ref_fasta_file + ".txt"
         with open(input_the_ref_fasta_file,'r') as r:
@@ -133,29 +127,30 @@ for _ in range(1000):
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi_ = str(seq_ref.seq)
                 all_ref_seq.append(seq_main_seq_modifi_)
-    elif input_the_ref_fasta_file == "-Auto":
+    elif Auto and Auto == True and input_the_ref_fasta_file == None:
         list_ref = []
     else:
         print  ('"Something going wrong!!!, Please review the tutorial and your input and try again"')
-        continue
+        return
     ############## STEP 1 ( INDEX )###
     ##################################
     #read and open main fasta file.
 
     while True:
-        save_folder_name = input("Create a folder to save the results in: ")
         file_name_exist = 0
         # creat folder where result will be saved
-        directory = save_folder_name.replace('.fasta', '')
-        directory = "Result\\" + directory + "\\"
+        #directory = save_folder_name.replace('.fasta', '')
+
+        dirname, filename = os.path.split(os.path.realpath(sys.argv[0]))
+        directory = os.path.join(dirname, "Result" , save_folder_name )
+        directory = directory + "\\"
 
         if os.path.exists(directory) == False:
             os.makedirs(directory)
             break
         else:
             print ("you cannot make a folder with this name, already exist!!, please try again")
-            continue
-
+            return
     print ("Reading Files")
     ##############
     ##### first ENc cuz I will used in auto ref
@@ -179,7 +174,7 @@ for _ in range(1000):
     #######take the lowest 10% enc as ref.
     #########################################
         print ("Reference gene set")
-        if input_the_ref_fasta_file == "-Auto":
+        if Auto and Auto == True:
             enc_read_results = pd.read_csv(save_file_name_enc)
             enc_read_results.sort_values(['ENc'], inplace=True)
             data_lowest_enc = int ( round (len(enc_read_results) * 0.10,0) )
@@ -198,7 +193,10 @@ for _ in range(1000):
                         seq_main_seq_modifi_ = str(seq_ref.seq)
                     list_ref.append(str(seq_main_seq_modifi_))
 
-        print (enc_read_results_lowest_enc_gene_id)
+            try:
+                print (enc_read_results_lowest_enc_gene_id)
+            except:
+                pass
 
         print ("______________________________________" + "\n")
 
@@ -262,27 +260,27 @@ for _ in range(1000):
             df_for_each_file_ATCG = df_for_each_file_ATCG.append(df_ATCG, ignore_index=True, sort=False)
 
             # if not -auto 1 CAI
-            if input_the_ref_fasta_file != "-Auto":
+            if Auto == False:
                 df_CAI = pd.DataFrame()
                 df_CAI['gene id'] = [seq_main.id]
                 lenghth_seq = len(str(seq_main.seq)) % 3
                 if lenghth_seq == 2:
-                    seq_main_seq_modifi = str(seq_main.seq) + 'A'
+                    seq_main_seq_modifi = str(seq_main.seq[:-2])
                 elif lenghth_seq == 1:
-                    seq_main_seq_modifi = str(seq_main.seq) + 'AA'
+                    seq_main_seq_modifi = str(seq_main.seq[:-1])
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi = str(seq_main.seq)
                 df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=all_ref_seq)]
                 df_for_each_file_CAI = df_for_each_file_CAI.append(df_CAI, ignore_index=True, sort=False)
             ### cai if == -auto
-            elif input_the_ref_fasta_file == "-Auto":
+            elif Auto and Auto == True:
                 df_CAI = pd.DataFrame()
                 df_CAI['gene id'] = [seq_main.id]
                 lenghth_seq = len(str(seq_main.seq)) % 3
                 if lenghth_seq == 2:
-                    seq_main_seq_modifi = str(seq_main.seq) + 'A'
+                    seq_main_seq_modifi = str(seq_main.seq[:-2])
                 elif lenghth_seq == 1:
-                    seq_main_seq_modifi = str(seq_main.seq) + 'AA'
+                    seq_main_seq_modifi = str(seq_main.seq[:-1])
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi = str(seq_main.seq)
                 df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=list_ref)]
@@ -316,12 +314,6 @@ for _ in range(1000):
 
 
 
-        #print ("Loading >>> RSCU")
-        #3 RSCU
-        #rscu_result = RSCU.RSCU(allseq)
-        #df_for_each_file_RSCU = pd.DataFrame()
-        #df_for_each_file_RSCU['AA'] = [i for i in rscu_result]
-        #df_for_each_file_RSCU['RSCU'] = [rscu_result[i] for i in rscu_result]
 
     ############## STEP 2 ( stat )###
     ##################################
@@ -376,15 +368,15 @@ for _ in range(1000):
         i_file_name_only =os.path.basename(i_file_name)
         save_file_name_Correlation = directory + i_file_name_only + "_Correlation.txt"
         with open(save_file_name_Correlation,"w") as f:
-            f.write ("Correlation result" + "\n"
-                     "ENc Vs. CAI = " + str (corr_ENc_CAI[0]) + " ,p-value = " + str(corr_ENc_CAI[1])+ "\n"
-                     "ENc Vs. GC = " +  str (corr_ENc_GC[0]) + " ,p-value = " +  str(corr_ENc_GC[1])+ "\n"
-                     "ENc Vs. GC3 = " +  str (corr_ENc_GC3[0]) + " ,p-value = " +  str(corr_ENc_GC3[1])+ "\n"
-                     "CAI Vs. Gene Length = " +  str (corr_cai_gene_len[0]) + " ,p-value = " +  str(corr_cai_gene_len[1])+ "\n"
-                     "GC3 Vs. GC12 = " +  str (corr_GC3_GC12[0]) + " ,p-value = " +  str(corr_GC3_GC12[1])+ "\n"
-                     "GC Vs. GRAVY = "  +  str (corr_GC_gravy[0]) + " ,p-value = " +  str(corr_GC_gravy[1])+ "\n"
-                     "GC Vs. AROMO = "  +  str (corr_GC_aromo[0]) + " ,p-value = " +  str(corr_GC_aromo[1])+ "\n"
-                     "GC3 Vs. GRAVY = "  +  str (corr_GC3_gravy[0]) + " ,p-value = " +  str(corr_GC3_gravy[1])+ "\n"
+            f.write ("Correlation result" + "\n"+
+                     "ENc Vs. CAI = " + str (corr_ENc_CAI[0]) + " ,p-value = " + str(corr_ENc_CAI[1])+ "\n"+
+                     "ENc Vs. GC = " +  str (corr_ENc_GC[0]) + " ,p-value = " +  str(corr_ENc_GC[1])+ "\n"+
+                     "ENc Vs. GC3 = " +  str (corr_ENc_GC3[0]) + " ,p-value = " +  str(corr_ENc_GC3[1])+ "\n"+
+                     "CAI Vs. Gene Length = " +  str (corr_cai_gene_len[0]) + " ,p-value = " +  str(corr_cai_gene_len[1])+ "\n"+
+                     "GC3 Vs. GC12 = " +  str (corr_GC3_GC12[0]) + " ,p-value = " +  str(corr_GC3_GC12[1])+ "\n"+
+                     "GC Vs. GRAVY = "  +  str (corr_GC_gravy[0]) + " ,p-value = " +  str(corr_GC_gravy[1])+ "\n"+
+                     "GC Vs. AROMO = "  +  str (corr_GC_aromo[0]) + " ,p-value = " +  str(corr_GC_aromo[1])+ "\n"+
+                     "GC3 Vs. GRAVY = "  +  str (corr_GC3_gravy[0]) + " ,p-value = " +  str(corr_GC3_gravy[1])+ "\n"+
                      "GC3 Vs. AROMO = "  +  str (corr_GC3_aromo[0]) + " ,p-value = " +  str(corr_GC3_aromo[1])+ "\n")
 
     #######Save all DataFrames to csv
@@ -510,9 +502,9 @@ for _ in range(1000):
         plt.savefig(save_file_name_ENc_GC_violin)
 
     #ACTG3 violin plot
-        df_only_GC0123 = df_for_each_file_ATCG[['A3','T3','C3','G3']]
+        df_only_ACTG3 = df_for_each_file_ATCG[['A3','T3','C3','G3']]
         fig77 = plt.figure()
-        plt.violinplot([df_only_GC0123['A3'],df_only_GC0123['T3'],df_only_GC0123['C3'],df_only_GC0123['G3']], showmeans=False,showmedians=True)
+        plt.violinplot([df_only_ACTG3['A3'],df_only_ACTG3['T3'],df_only_ACTG3['C3'],df_only_ACTG3['G3']], showmeans=False,showmedians=True)
         plt.title('violin plot for A3, T3, C3 and G3 %')
         plt.ylabel("%")
         #add labels on x-axis
@@ -585,18 +577,7 @@ for _ in range(1000):
                      "axis 1 Vs. AROMO = " + str(corr_CA_AROMO1[0]) + " ,p-value = " + str(corr_CA_AROMO1[1]) + "\n" +
                      "axis 2 Vs. AROMO = " + str(corr_CA_AROMO2[0]) + " ,p-value = " + str(corr_CA_AROMO2[1]) + "\n" )
 
-
-
-
-
-
-
         print ("Results Saved")
-        end = time.time()
-        print(end - start)
-        print ("____New session started_______________________________")
 
-    #except:
-     #   print ('"Something going wrong!!!, Please review the tutorial and your input and try again"')
-      #  continue
+
 

@@ -1,10 +1,20 @@
 def CA(file):
+    """correspondence analysis.
+
+    Args:
+        
+        file (directory): csv file contains genes' RSCU values
+
+    Returns:
+        - csv file contains genes' values for the first 4 axes of the correspondence analysis result
+        - csv file contains codons' values for the first 4 axes of the correspondence analysis result
+        - plot the genes first 2 axes values of the correspondence analysis result
+        - plot the codons first 2 axes values of the correspondence analysis result
+    """
     import pandas as pd
     import prince
-    #from fanalysis.ca import CA
     import matplotlib.pyplot as plt
 
-    #plt.style.use('ggplot')
     df = pd.read_csv(file)
     df.set_index(df.iloc[:,0] , inplace=True)# to make the first column is the index
     df.drop(df.columns[0], axis=1,inplace= True)
@@ -38,14 +48,16 @@ def CA(file):
     file_genes = file.replace(".csv",'')
     file_genes = file_genes+ "genes"
     file_genes = file_genes + ".csv"
-    genes.to_csv(file_genes,sep=',', index=True, header=True)
+    genes.rename(columns={genes.columns[0]: 'axis 1', genes.columns[1]: 'axis 2', genes.columns[2]: 'axis 3', genes.columns[3]: 'axis 4'}, inplace=True)
+    genes.to_csv(file_genes,sep=',', index=True, header=True) # return csv file for genes ca result
 
 
 
     file_codons = file.replace(".csv",'')
     file_codons = file_codons+ "codons"
     file_codons = file_codons + ".csv"
-    codons.to_csv(file_codons, sep=',', index=True, header=True)
+    codons.rename(columns={codons.columns[0]: 'axis 1', codons.columns[1]: 'axis 2', codons.columns[2]: 'axis 3', codons.columns[3]: 'axis 4'},inplace=True)
+    codons.to_csv(file_codons, sep=',', index=True, header=True) # return csv file for codon ca result
 
 
     file_inertia = file.replace('.csv','.txt')
@@ -67,20 +79,15 @@ def CA(file):
     plt.xlabel("Axis 1")
     plt.ylabel("Axis 2")
     plt.title("CA-plot")
-    plt.scatter(genes[0],genes[1],s=10,marker ='o')
+    plt.scatter(genes['axis 1'],genes['axis 2'],s=10,marker ='o')
 
 
     plt.axhline(0, color='black', linestyle='-')
     plt.axvline(0, color='black', linestyle='-')
 
-    #if len(genes) < 200:
-     #   for x , y , t in zip(genes[0],genes[1] , genes.index.values):
-      #      x = x * (1 + 0.01)
-       #     y = y * (1 + 0.01)
-        #    plt.text(x,y,t)
 
     save_file_name__ca_plot = file + "_CA_gens_plot.png"
-    plt.savefig(save_file_name__ca_plot)
+    plt.savefig(save_file_name__ca_plot) # return plot file for gene ca result
 
     #for codons
     plt.style.use('seaborn-dark-palette')
@@ -90,24 +97,23 @@ def CA(file):
     plt.xlabel("Axis 1")
     plt.ylabel("Axis 2")
     plt.title("CA-plot")
-    plt.scatter(codons[0],codons[1], s=10,marker ='o')
+    plt.scatter(codons['axis 1'],codons['axis 2'], s=10,marker ='o')
 
     plt.axhline(0, color='black', linestyle='-')
     plt.axvline(0, color='black', linestyle='-')
 
     if len(codons) < 200:
-        for x , y , t in zip(codons[0],codons[1] , codons.index.values):
+        for x , y , t in zip(codons['axis 1'],codons['axis 2'] , codons.index.values):
             x = x * (1 + 0.01)
             y = y * (1 + 0.01)
             plt.text(x,y,t)
 
     file = file.replace('.csv','')
     save_file_name__ca_codons_plot = file + "_CA_codos_plot.png"
-    plt.savefig(save_file_name__ca_codons_plot)
+    plt.savefig(save_file_name__ca_codons_plot) # return plot file for codon ca result
 
     read_genes_file = pd.read_csv(file_genes)
-    read_genes_file.rename(columns={read_genes_file.columns[0]:'gene id','0': 'axis 1','1': 'axis 2','2': 'axis 3','3': 'axis 4'}, inplace=True)
-
+    read_genes_file.rename(columns={genes.columns[0]: 'gene id', genes.columns[1]: 'axis 1', genes.columns[2]: 'axis 2'}, inplace=True)
 
 
 

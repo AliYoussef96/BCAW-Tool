@@ -1,4 +1,15 @@
 def op_corr(ENc_file_name,RSCU_file_name):
+    """
+    determine the optimal codons using the correlation method described here: https://doi.org/10.1371/journal.pgen.1000556
+
+    Args:
+
+        ENc_file_name (file): file contains the ENc values for a set of genes
+        RSCU_file_name (file): file contains the RSCU values for a set of genes
+    Returns:
+        DataFrame contains the optimal codons
+
+    """
     #optimal codons by corr. method
     import pandas as pd
     import numpy as np

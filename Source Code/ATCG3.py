@@ -1,8 +1,23 @@
-#A3,C3,G3,T3 for plant genome
-#1- cound N3 in each gene / all number of codons in this gene
-#2- sum each type of N3 / number of genes ( to get the average of each N3 for all genes )
-
 def ACTG3(sequ , A = False , T = False , C = False, G = False):
+    """
+    Calculate A, T, G, and C content at the third position.
+
+    Args:
+       
+        sequ (str): DNA sequence
+        A (bool): default = False
+        T (bool): default = False
+        C (bool): default = False
+        G (bool): default = False
+
+    Returns:
+		- A3 content if arg(A) is True		
+		- T3 content if arg(T) is True	
+		- C3 content if arg(C) is True	
+		- G3 content if arg(G) is True	
+		- None if all args are False
+   
+    """
     import re
     A3 = 0
     T3 = 0

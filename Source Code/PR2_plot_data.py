@@ -1,6 +1,16 @@
 # make the ordinate and the abscissa for PR2 plot for plant genomes
 
 def PR2_plot(sequ , o =False, a = False ):
+    """Generate data for PR2 plot.
+
+    Args:
+        sequ (str): DNA sequence
+
+    Returns:
+        int: ordinate and abscissa for PR2 plot
+
+    """
+    
     import re
     sequ = str(sequ)
     codon = re.findall('...',sequ)
