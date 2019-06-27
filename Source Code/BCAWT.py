@@ -33,37 +33,37 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
 
     """
 
+    import Bio
+    from Bio import SeqIO
+    from Bio.Alphabet import IUPAC
+    from Bio.Seq import Seq
+    from Bio.SeqUtils import GC
+    from Bio.Data import CodonTable
+    from Bio.Alphabet import generic_dna
+    import pandas as pd
+    from pandas import DataFrame
+    from BCAWT import GC123
+    from BCAWT import ATCG3
+    from BCAWT import ENc
+    from CAI import CAI
+    import scipy
+    from scipy import stats
+    from BCAWT import PR2_plot_data
+    from BCAWT import P2_index
+    import os
+    import matplotlib.pyplot as plt
+    import numpy as np
+    from BCAWT import CA_RSCU
+    from BCAWT import CA
+    from Bio.Data import CodonTable
+    from BCAWT import Optimal_codon_corr_method
+    import scipy.optimize as opt
+    import warnings
+    import time
+    from BCAWT import GRAVY_AROMO
+    import sys
+    warnings.filterwarnings("ignore", category=RuntimeWarning)
 
-	import Bio
-	from Bio import SeqIO
-	from Bio.Alphabet import IUPAC
-	from Bio.Seq import Seq
-	from Bio.SeqUtils import GC
-	from Bio.Data import CodonTable
-	from Bio.Alphabet import generic_dna
-	import pandas as pd
-	from pandas import DataFrame
-	from BCAWT import GC123
-	from BCAWT import ATCG3
-	from BCAWT import ENc
-	from CAI import CAI
-	import scipy
-	from scipy import stats
-	from BCAWT import PR2_plot_data
-	from BCAWT import P2_index
-	import os
-	import matplotlib.pyplot as plt
-	import numpy as np
-	from BCAWT import CA_RSCU
-	from BCAWT import CA
-	from Bio.Data import CodonTable
-	from BCAWT import Optimal_codon_corr_method
-	import scipy.optimize as opt
-	import warnings
-	import time
-	from BCAWT  import GRAVY_AROMO
-	import sys
-	warnings.filterwarnings("ignore", category=RuntimeWarning)
     file_name_list = []
     #input_the_main_fasta_file  = input("-s or -m then Enter the name of the file: ")
     if fasta and fasta == True:
