@@ -7,6 +7,7 @@ Guide
 .. toctree::
    :maxdepth: 2
    
+   Statement
    Usage
    install
    Dependencies
