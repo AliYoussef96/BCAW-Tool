@@ -24,3 +24,6 @@ then run ( It will automatically run a test on the results files ):
 	BCAWT.BCAW('Ecoli','result_folder',fasta=True,Auto=True)
 	
     	>> Results Saved
+
+ 
+For more information on the equations used in the tool https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf
