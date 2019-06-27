@@ -20,7 +20,7 @@ API
 .. toctree::
    :maxdepth: 2
 
-   BCAWT
+   
    modules
 
 
