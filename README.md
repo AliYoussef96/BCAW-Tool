@@ -40,7 +40,7 @@ Usage
 
 **Auto testing**
 
-First download fasta file containing the coding sequence ( you can download any fasta file containing gene sequences to be analyzed from [NCBI](https://www.ncbi.nlm.nih.gov/) database for example.
+First download fasta file containing the coding sequence ( you can download any fasta file containing gene sequences to be analyzed from [NCBI](https://www.ncbi.nlm.nih.gov/) database for example).
 
 [Test file](https://github.com/AliYoussef96/BCAWTool/blob/master/Ecoli.fasta)
 
