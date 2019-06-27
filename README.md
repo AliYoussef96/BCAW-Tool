@@ -64,6 +64,7 @@ input_the_main_fasta_file (str) – fasta file contains DNA sequence
 input_the_ref_fasta_file (str) – fasta file contains reference DNA sequence, default = None
 
 **Output**
+
 ![Table 1: Expected Output files](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png)
 
 
