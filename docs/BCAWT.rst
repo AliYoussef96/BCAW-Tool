@@ -4,7 +4,7 @@ BCAWT package
 BCAWT.BCAWT module
 ------------------
 
-.. automodule:: BCAWT.BCAWT
+.. automodule:: BCAWT
    :members:
     
     
