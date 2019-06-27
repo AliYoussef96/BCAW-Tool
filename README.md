@@ -29,7 +29,7 @@ For more details about CUB, and the equations used in BCAWT [see](https://github
 **Using pip**
 
 ```
-pip install
+pip install BCAWT
 ```
 
 ## Contribution Guidelines
