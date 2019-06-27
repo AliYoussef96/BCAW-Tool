@@ -24,8 +24,6 @@ API
    
    BCAWT
  
- 
- For more information on the equations used in the tool https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf
 
 
 
