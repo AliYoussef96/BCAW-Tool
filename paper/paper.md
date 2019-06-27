@@ -31,6 +31,6 @@ from BCAWT import BCAWT
 BCAWT.BCAW('fasta_file','output_Folder',fasta=True,Auto=True)
 ```
 
-The expected outputs are 23 different files, 8 are in comma-separated values ( CSV ) format, 4 are in text format and, 11 graphs in portable network graphics ( PNG ) format. The equations used for analyzing CUB in the tool and the expected outputs are reported in the BCAWT's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
+The expected outputs are 23 different files, 8 are in comma-separated values ( CSV ) format, 4 are in text format and, 11 graphs in portable network graphics ( PNG ) format. The equations used for analyzing CUB in the tool and the expected outputs, as well as the API are reported in the BCAWT's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
 
 # References
