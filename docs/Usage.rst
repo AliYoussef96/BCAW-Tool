@@ -21,7 +21,8 @@ BCAWT_auto_test.auto_check_files()
 
 **Main Usage**
 
-	from BCAWT import BCAWT
-    
-	BCAWT.BCAW('Ecoli','result_folder',fasta=True,Auto=True)
-    >> Results Saved
+```
+from BCAWT import BCAWT
+BCAWT.BCAW('Ecoli','result_folder',fasta=True,Auto=True)
+>> Results Saved
+```
