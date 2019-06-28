@@ -94,6 +94,9 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 ![Table 1: Expected Output files](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png)
 
+### Abbreviations
+[Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
+
 ### API documentation
 
 [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)
