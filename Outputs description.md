@@ -1,4 +1,4 @@
-## Abbreviations list
+## Abbreviations table
 
 
 |Abbreviation|Description|
@@ -16,3 +16,9 @@
 | G3 | G3 nucleotides content  at third codon position |
 | GRAVY | General average hydropathicity |
 | AROMO | Aromaticity |
+| ENc | Effective number of codons |
+| CAI | Codon adaptation index |
+| RSCU | Relative synonymous codon usage |
+| P2-index | Translational selection index |
+| PR2-plot | Parity Rule 2 -plot |
+| CA | Correspondence analysis |
