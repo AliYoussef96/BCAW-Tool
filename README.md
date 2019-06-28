@@ -103,11 +103,11 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 ## Output examples
 
-![GC violin plot: Output examples](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Escherichia%20coli%20str.%20K-12%20substr.%20MG1655.fasta_GC%20violin%20plot.png)
+![GC violin plot: Output examples](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Escherichia%20coli%20str.%20K-12%20substr.%20MG1655.fasta_GC%20violin%20plot.png)
 
 GC violin plot: Explain the range of GC, GC1, GC2 and, GC3 content as a normal box plot but also show the probability density of the data at different values for Escherichia coli.
 
-![Correspondence analysis: Output examples](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Escherichia%20coli%20str.%20K-12%20substr.%20MG1655.fasta_CA_RSCU_CA_codos_plot.png)
+![Correspondence analysis: Output examples](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Escherichia%20coli%20str.%20K-12%20substr.%20MG1655.fasta_CA_RSCU_CA_codos_plot.png)
 
 Correspondence analysis plot for Escherichia coli codons.
 
