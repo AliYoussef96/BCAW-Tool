@@ -73,7 +73,7 @@ input_the_main_fasta_file (str) – fasta file contains DNA sequence
 
 input_the_ref_fasta_file (str) – fasta file contains reference DNA sequence, default = None
 
-**Important Note:* BCAW tool expect coding sequences
+**Important Note:** BCAW tool expect coding sequences
 
 **Output**
 
