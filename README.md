@@ -77,6 +77,9 @@ input_the_ref_fasta_file (str) – fasta file contains reference DNA sequence, d
 
 ![Table 1: Expected Output files](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png)
 
+**API documentation**
+
+[BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)
 
 ## Output examples
 
@@ -87,3 +90,5 @@ GC violin plot: Explain the range of GC, GC1, GC2 and, GC3 content as a normal b
 ![Correspondence analysis: Output examples](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Escherichia%20coli%20str.%20K-12%20substr.%20MG1655.fasta_CA_RSCU_CA_codos_plot.png)
 
 Correspondence analysis plot for Escherichia coli codons.
+
+**For more about [codon usage bias](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf) or/and about [BCAW tool](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)**
