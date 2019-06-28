@@ -5,4 +5,6 @@ Documentations
 
 2- For more information about the BCAW tool and the API >> https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html
 
-3- For more information about the description output.
+3- For more information about the output plots >> https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Plots%20Description.md.
+
+4- Abbreviations table >> https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md
