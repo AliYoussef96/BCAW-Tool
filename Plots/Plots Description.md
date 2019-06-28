@@ -1,3 +1,5 @@
+[**This fasta file for E.coli genes was used**](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Ecoli.fasta)
+
 ![fig1: ](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Ecoli.fasta_AROMA%20Vs.%20GC.png)
 
 Fig1: Relationship between GC overall content and the aromaticity. Blue dots represent the genes
