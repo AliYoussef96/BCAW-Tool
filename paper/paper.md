@@ -28,7 +28,7 @@ BCAW Tool was developed using python 3.7 with build in and third-party packages 
 
 ```
 from BCAWT import BCAWT
-BCAWT.BCAW('fasta_file','output_Folder',fasta=True,Auto=True)
+BCAWT.BCAW('Ecoli','result_folder',genetic_code_=11,fasta=True,Auto=True)
 ```
 
 The expected outputs are 23 different files, 8 are in comma-separated values ( CSV ) format, 4 are in text format and, 11 graphs in portable network graphics ( PNG ) format [(Table)](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png). The equations used for analyzing CUB in the tool and the expected outputs, as well as the API are reported in the BCAWT's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
