@@ -108,4 +108,10 @@ GC violin plot: Explain the range of GC, GC1, GC2 and, GC3 content as a normal b
 
 Correspondence analysis plot for Escherichia coli codons.
 
-**For more about [codon usage bias](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf) or/and about [BCAW tool](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)**
+## Documentations
+
+1- For more information about codon usage bias (CUB) and equations used to analyze CUB in the BCAW tool >> [Introduction to CUB](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf).
+
+2- For more information about the BCAW tool and the API >> [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html).
+
+3- For more information about the description output.
