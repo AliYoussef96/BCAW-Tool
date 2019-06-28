@@ -75,6 +75,20 @@ input_the_ref_fasta_file (str) – fasta file contains reference DNA sequence, d
 
 **Important Note:** BCAW tool expect coding sequences
 
+**To obtain such fasta file for a species of interest**
+
+Say that the species of interest is Escherichia coli str. K-12 substr. MG1655: 
+
+1- Go to the NCBI database.
+
+2- In the search bar write ( Escherichia coli str. K-12 substr. MG1655, complete genome ).
+
+3- choose one of the results ( depending on what you want in your analysis ).
+
+3- On the write of the page, you will find **send to** option. From **sent to** select **Coding Sequences** then **FASTA nucleotides** Finally, press on **Create File**
+
+For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/)
+
 **Output**
 
 ![Table 1: Expected Output files](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png)
