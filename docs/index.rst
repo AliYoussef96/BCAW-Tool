@@ -13,8 +13,10 @@ Guide
    Dependencies
    Contribution
    Documentations
+   plots
    License
    help
+   
    
    
 
