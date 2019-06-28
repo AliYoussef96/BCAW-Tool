@@ -21,7 +21,7 @@ then run ( It will automatically run a test on the results files ):
 
 	from BCAWT import BCAWT
     
-	BCAWT.BCAW('Ecoli','result_folder',fasta=True,Auto=True)
+	BCAWT.BCAW('Ecoli','result_folder', genetic_code_ = 11,fasta=True,Auto=True)
 	
     	>> Results Saved
 
