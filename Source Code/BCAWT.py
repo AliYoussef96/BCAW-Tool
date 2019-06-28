@@ -271,7 +271,7 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
             df_ATCG['C3'] = ATCG3.ACTG3(seq_main.seq, C=True)
             df_ATCG['G3']  = ATCG3.ACTG3(seq_main.seq , G = True)
             df_ATCG["GRAVY"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, genetic_code_, G=True)
-            df_ATCG["AROMO"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, genetic_code_, A=True)
+            df_ATCG["AROMA"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, genetic_code_, A=True)
             df_ATCG["Gene Length"] = len(str(seq_main.seq))
             df_for_each_file_ATCG = df_for_each_file_ATCG.append(df_ATCG, ignore_index=True, sort=False)
 
@@ -372,12 +372,12 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
         #GC Vs. GRAvy
         corr_GC_gravy = scipy.stats.pearsonr(df_for_each_file_ATCG['GRAVY'], df_for_each_file_ATCG["GC"])
         #GC Vs. aromo
-        corr_GC_aromo = scipy.stats.pearsonr(df_for_each_file_ATCG['AROMO'], df_for_each_file_ATCG["GC"])
+        corr_GC_aromo = scipy.stats.pearsonr(df_for_each_file_ATCG['AROMA'], df_for_each_file_ATCG["GC"])
 
         #GC3 Vs. GRAvy
         corr_GC3_gravy = scipy.stats.pearsonr(df_for_each_file_ATCG['GRAVY'], df_for_each_file_ATCG["GC3"])
         #GC3 Vs. aromo
-        corr_GC3_aromo = scipy.stats.pearsonr(df_for_each_file_ATCG['AROMO'], df_for_each_file_ATCG["GC3"])
+        corr_GC3_aromo = scipy.stats.pearsonr(df_for_each_file_ATCG['AROMA'], df_for_each_file_ATCG["GC3"])
 
         #CAI Vs. gene len
         CAI_Vs_gene_len = scipy.stats.pearsonr(df_for_each_file_ATCG["Gene Length"], df_for_each_file_CAI['CAI'])
@@ -392,9 +392,9 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
                      "CAI Vs. Gene Length = " +  str (corr_cai_gene_len[0]) + " ,p-value = " +  str(corr_cai_gene_len[1])+ "\n"+
                      "GC3 Vs. GC12 = " +  str (corr_GC3_GC12[0]) + " ,p-value = " +  str(corr_GC3_GC12[1])+ "\n"+
                      "GC Vs. GRAVY = "  +  str (corr_GC_gravy[0]) + " ,p-value = " +  str(corr_GC_gravy[1])+ "\n"+
-                     "GC Vs. AROMO = "  +  str (corr_GC_aromo[0]) + " ,p-value = " +  str(corr_GC_aromo[1])+ "\n"+
+                     "GC Vs. AROMA = "  +  str (corr_GC_aromo[0]) + " ,p-value = " +  str(corr_GC_aromo[1])+ "\n"+
                      "GC3 Vs. GRAVY = "  +  str (corr_GC3_gravy[0]) + " ,p-value = " +  str(corr_GC3_gravy[1])+ "\n"+
-                     "GC3 Vs. AROMO = "  +  str (corr_GC3_aromo[0]) + " ,p-value = " +  str(corr_GC3_aromo[1])+ "\n")
+                     "GC3 Vs. AROMA = "  +  str (corr_GC3_aromo[0]) + " ,p-value = " +  str(corr_GC3_aromo[1])+ "\n")
 
     #######Save all DataFrames to csv
     #################################
@@ -472,13 +472,13 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
 
     #GC Vs. AROMO
         fig33 = plt.figure()
-        plt.xlabel("AROMO")
+        plt.xlabel("AROMA")
         plt.ylabel("GC")
-        plt.title("AROMO Vs. GC")
-        plt.scatter(df_for_each_file_ATCG['AROMO'],df_for_each_file_ATCG['GC'],marker ='o',s=10)
-        plt.plot(np.unique(df_for_each_file_ATCG['AROMO']), np.poly1d(np.polyfit(df_for_each_file_ATCG['AROMO'], df_for_each_file_ATCG['GC'], 1))(np.unique(df_for_each_file_ATCG['AROMO'])),'black')
+        plt.title("AROMA Vs. GC")
+        plt.scatter(df_for_each_file_ATCG['AROMA'],df_for_each_file_ATCG['GC'],marker ='o',s=10)
+        plt.plot(np.unique(df_for_each_file_ATCG['AROMA']), np.poly1d(np.polyfit(df_for_each_file_ATCG['AROMA'], df_for_each_file_ATCG['GC'], 1))(np.unique(df_for_each_file_ATCG['AROMA'])),'black')
 
-        save_file_name_GC_AROMO_plot = directory + i_file_name_only + "_AROMO Vs. GC.png"
+        save_file_name_GC_AROMO_plot = directory + i_file_name_only + "_AROMA Vs. GC.png"
         plt.savefig(save_file_name_GC_AROMO_plot)
     #PR2-plot
         fig3 = plt.figure()
@@ -568,9 +568,9 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
 
 
         #CA_RSCU vs AROMO axis 1
-        corr_CA_AROMO1 = scipy.stats.pearsonr(read_CA_result_new['axis 1'], df_for_each_file_ATCG['AROMO'])
+        corr_CA_AROMO1 = scipy.stats.pearsonr(read_CA_result_new['axis 1'], df_for_each_file_ATCG['AROMA'])
         #CA_RSCU vs AROMO axis 2
-        corr_CA_AROMO2 = scipy.stats.pearsonr(read_CA_result_new['axis 2'], df_for_each_file_ATCG['AROMO'])
+        corr_CA_AROMO2 = scipy.stats.pearsonr(read_CA_result_new['axis 2'], df_for_each_file_ATCG['AROMA'])
 
 
         save_file_name_Correlation = directory + i_file_name_only + "_Correlation_CA_axis.txt"
@@ -591,8 +591,8 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
                      "axis 1 Vs. GRAVY = " + str(corr_CA_gravy1[0]) + " ,p-value = " + str(corr_CA_gravy1[1]) + "\n" +
                      "axis 2 Vs. GRAVY = " + str(corr_CA_gravy2[0]) + " ,p-value = " + str(corr_CA_gravy2[1]) + "\n" +
 
-                     "axis 1 Vs. AROMO = " + str(corr_CA_AROMO1[0]) + " ,p-value = " + str(corr_CA_AROMO1[1]) + "\n" +
-                     "axis 2 Vs. AROMO = " + str(corr_CA_AROMO2[0]) + " ,p-value = " + str(corr_CA_AROMO2[1]) + "\n" )
+                     "axis 1 Vs. AROMA = " + str(corr_CA_AROMO1[0]) + " ,p-value = " + str(corr_CA_AROMO1[1]) + "\n" +
+                     "axis 2 Vs. AROMA = " + str(corr_CA_AROMO2[0]) + " ,p-value = " + str(corr_CA_AROMO2[1]) + "\n" )
 
         print ("Results Saved")
 

@@ -19,7 +19,10 @@ def GRAvy_ARomo(seq , genetic_code_ = 1, G = False , A = False):
     from Bio.SeqUtils.ProtParam import ProteinAnalysis
     from Bio.Seq import Seq
 
-    seq = Seq(seq)
+    try:
+        seq = Seq(seq)
+    except:
+        pass
 
     translate_seq = str(seq.translate(table=genetic_code_))
 
