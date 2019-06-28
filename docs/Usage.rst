@@ -27,4 +27,27 @@ then run ( It will automatically run a test on the results files ):
 
 **Important Note:** BCAW tool expect coding sequences 
 
-For more information on the equations used in the tool https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf
+**Input**
+
+input_the_main_fasta_file (str) : fasta file contains DNA sequence 
+
+input_the_ref_fasta_file (str) : fasta file contains reference DNA sequence, default = None. Here Auto is True, to generate automatically reference genes set
+
+genetic_code_ (int) : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+
+**Important Note:** BCAW tool expect coding sequences
+
+**To obtain such fasta file for a species of interest**
+
+Say that the species of interest is Escherichia coli str. K-12 substr. MG1655: 
+
+1- Go to the NCBI database.
+
+2- In the search bar write ( Escherichia coli str. K-12 substr. MG1655, complete genome ).
+
+3- choose one of the results ( depending on what you want in your analysis ).
+
+3- On the write of the page, you will find **send to** option. From **sent to** select **Coding Sequences** then **FASTA nucleotides** Finally, press on **Create File**
+
+For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/)
+
