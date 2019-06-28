@@ -1,12 +1,15 @@
 ## Abbreviations list
 
 
-| Abbreviation | Description |
-| ------------ | ----------- |
-| GC | G and C nucleotides content|
-| GC1 | G and C nucleotides content at first codon postion|
-| GC2 | G and C nucleotides content at second codon postion|
-| GC3 | G and C nucleotides content at third codon postion|
-| GC12 | G and C nucleotides content at first + second codon postions|
+|Abbreviation|Description|
+|------------|-----------|
+| GC | G and C nucleotides content |
+| GC1 | G and C nucleotides content at first codon postion |
+| GC2 | G and C nucleotides content at second codon postion |
+| GC3 | G and C nucleotides content at third codon postion |
+| GC12 | G and C nucleotides content at first + second codon postions |
 
 
+|A|B|C|AA|
+| --- | --- | --- | --- |
+|Q|W   |    E | RR     |
