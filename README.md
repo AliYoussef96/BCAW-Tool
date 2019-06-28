@@ -34,7 +34,7 @@ pip install BCAWT
 
 ## Contribution Guidelines
 
-**Contributions to the software are welcome.**
+**Contributions to the software are welcome**
 
 For bugs and suggestions, the most effective way is by raising an issue on the github issue tracker. 
 Github allows you to classify your issues so that we know if it is a bug report, feature request or feedback to the authors.
@@ -42,10 +42,9 @@ Github allows you to classify your issues so that we know if it is a bug report,
 If you wish to contribute some changes to the code then you should submit a [pull request](https://github.com/AliYoussef96/BCAW-Tool/pulls)
 How to create a Pull Request? [documentation on pull requests](https://help.github.com/en/articles/about-pull-requests)
 
-Usage
-=====
+## Usage
 
-**Auto testing**
+### Auto testing
 
 First download fasta file containing the coding sequence ( you can download any fasta file containing gene sequences to be analyzed from [NCBI](https://www.ncbi.nlm.nih.gov/) database for example).
 
@@ -60,14 +59,14 @@ BCAWT_auto_test.auto_check_files()
 >> test is completed 'successfully'
 ```
 
-**Main Usage**
+### Main Usage
 
 ```
 from BCAWT import BCAWT
 BCAWT.BCAW('Ecoli','result_folder',fasta=True,Auto=True)
 >> Results Saved
 ```
-**Input**
+### Input
 
 input_the_main_fasta_file (str) – fasta file contains DNA sequence 
 
@@ -75,7 +74,7 @@ input_the_ref_fasta_file (str) – fasta file contains reference DNA sequence, d
 
 **Important Note:** BCAW tool expect coding sequences
 
-**To obtain such fasta file for a species of interest**
+### To obtain such fasta file for a species of interest
 
 Say that the species of interest is Escherichia coli str. K-12 substr. MG1655: 
 
@@ -89,11 +88,11 @@ Say that the species of interest is Escherichia coli str. K-12 substr. MG1655:
 
 For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/)
 
-**Output**
+### Output
 
 ![Table 1: Expected Output files](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png)
 
-**API documentation**
+### API documentation
 
 [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)
 
