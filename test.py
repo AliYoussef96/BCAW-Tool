@@ -6,8 +6,7 @@ from BCAWT import GC123
 from BCAWT import GRAVY_AROMO
 from BCAWT import PR2_plot_data
 from BCAWT import P2_index
-import pandas as pd
-from pandas import DataFrame
+
 
 def test_bad_args_BCAWT():
     # make sure bad arguments raise errors
