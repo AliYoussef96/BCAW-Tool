@@ -5,19 +5,25 @@
     #2- fasta file for refrence set
 
 ########main file
-def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=None,fasta = False,txt=False,Auto=False):
+def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=None,genetic_code_ = 1, fasta = False,txt=False,Auto=False):
     """
     BCAWT ( Bio Codon Analysis Workflow Tool ), it manages a complete workflow to analysis
     the codon usage bias for genes and genomes of any organism..
 
     Args:
 
-        input_the_main_fasta_file (str): fasta file contains DNA sequence ( don't enter it with .fasta )
-        or text file contains paths for fasta files ( don't enter it with .txt )
+        input_the_main_fasta_file (str): fasta file contains DNA sequence ( don't enter it with .fasta ) or text file contains paths for fasta files ( don't enter it with .txt )
+
         save_folder_name (str): folder name where the result will be saved
+
         input_the_ref_fasta_file (str): fasta file contains reference DNA sequence, default = None
+
+        genetic_code_(int): default = 1, The Genetic Codes number described by NCBI (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+
         fasta (bool): default = False, if the first arg (input_the_main_fasta_file) is text file.
+
         txt (bool): default = False, if the first arg (input_the_main_fasta_file) is fasta file.
+
         Auto (bool): default = False, if input_the_ref_fasta_file not None.
 
     Notes:
@@ -28,10 +34,23 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
         - Auto (bool): should be = True to auto-generate a reference set, when arg (input_the_ref_fasta_file) not available ( = None )
 
     Returns:
-       github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png
+       for details see: github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png
 
 
     """
+
+    #bad arguments raise errors
+
+    if fasta == True and txt == True:
+        raise TypeError("Two file extensions are specified, ( fasta = True, txt = True ). Only one is allowed.")
+    if input_the_ref_fasta_file != None and Auto == True:
+        raise TypeError("Both genes reference set and Auto are specified  Only one is allowed.")
+    if txt == False and fasta == False :
+        raise TypeError ("The file extension is not specified, (fasta = False, txt = False )")
+
+
+
+
 
     import Bio
     from Bio import SeqIO
@@ -82,9 +101,8 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
             i = i.replace('\n','')
             i = i + ".fasta"
             file_name_list.append(i)
-    else:
-        print  ('"Something going wrong!!!, Please review the tutorial and your input and try again"')
-        return
+
+
     ############ref file
     file_name_ref_list = []
     if input_the_ref_fasta_file != None and fasta == True and Auto == False:
@@ -129,9 +147,7 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
                 all_ref_seq.append(seq_main_seq_modifi_)
     elif Auto and Auto == True and input_the_ref_fasta_file == None:
         list_ref = []
-    else:
-        print  ('"Something going wrong!!!, Please review the tutorial and your input and try again"')
-        return
+
     ############## STEP 1 ( INDEX )###
     ##################################
     #read and open main fasta file.
@@ -149,8 +165,8 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
             os.makedirs(directory)
             break
         else:
-            print ("you cannot make a folder with this name, already exist!!, please try again")
-            return
+            raise TypeError ("The folder is already exist")
+
     print ("Reading Files")
     ##############
     ##### first ENc cuz I will used in auto ref
@@ -254,12 +270,13 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
             df_ATCG['T3'] = ATCG3.ACTG3(seq_main.seq, T=True)
             df_ATCG['C3'] = ATCG3.ACTG3(seq_main.seq, C=True)
             df_ATCG['G3']  = ATCG3.ACTG3(seq_main.seq , G = True)
-            df_ATCG["GRAVY"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, G=True)
-            df_ATCG["AROMO"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, A=True)
+            df_ATCG["GRAVY"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, genetic_code_, G=True)
+            df_ATCG["AROMO"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, genetic_code_, A=True)
             df_ATCG["Gene Length"] = len(str(seq_main.seq))
             df_for_each_file_ATCG = df_for_each_file_ATCG.append(df_ATCG, ignore_index=True, sort=False)
 
             # if not -auto 1 CAI
+
             if Auto == False:
                 df_CAI = pd.DataFrame()
                 df_CAI['gene id'] = [seq_main.id]
@@ -270,7 +287,7 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
                     seq_main_seq_modifi = str(seq_main.seq[:-1])
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi = str(seq_main.seq)
-                df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=all_ref_seq)]
+                df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=all_ref_seq,genetic_code = genetic_code_)]
                 df_for_each_file_CAI = df_for_each_file_CAI.append(df_CAI, ignore_index=True, sort=False)
             ### cai if == -auto
             elif Auto and Auto == True:
@@ -283,7 +300,7 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
                     seq_main_seq_modifi = str(seq_main.seq[:-1])
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi = str(seq_main.seq)
-                df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=list_ref)]
+                df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=list_ref,genetic_code = genetic_code_)]
                 df_for_each_file_CAI = df_for_each_file_CAI.append(df_CAI, ignore_index=True, sort=False)
 
             #4 p2 index

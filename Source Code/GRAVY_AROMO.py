@@ -1,15 +1,16 @@
-def GRAvy_ARomo(seq , G = False , A = False):
-    """calculating Gravy and Aroma.
+def GRAvy_ARomo(seq , genetic_code_ = 1, G = False , A = False):
+    """calculating Gravy and Aroma for DNA sequence.
 
     Args:
         seq (str):DNA sequence
+        genetic_code_(int): default = 1, The Genetic Codes number described by NCBI (https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
         G (bool): default = False
         A (bool): default = False
         
 
     Returns:
         - Gravy value if arg(G) is True
-		
+
         - Aroma value if arg(A) is True
 		
         - None if both args are False
@@ -17,7 +18,10 @@ def GRAvy_ARomo(seq , G = False , A = False):
     """
     from Bio.SeqUtils.ProtParam import ProteinAnalysis
     from Bio.Seq import Seq
-    translate_seq = str(seq.translate(table=1))
+
+    seq = Seq(seq)
+
+    translate_seq = str(seq.translate(table=genetic_code_))
 
     protein_seq = translate_seq.replace("*", "")
 

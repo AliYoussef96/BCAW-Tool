@@ -1,3 +1,4 @@
+
 def ACTG3(sequ , A = False , T = False , C = False, G = False):
     """
     Calculate A, T, G, and C content at the third position.
@@ -50,8 +51,6 @@ def ACTG3(sequ , A = False , T = False , C = False, G = False):
     elif C and C == True:
         C3 = (C3 / len(codon)) * 100
         return C3
-
-
 
 
     

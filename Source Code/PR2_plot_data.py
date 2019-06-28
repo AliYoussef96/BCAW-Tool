@@ -5,10 +5,12 @@ def PR2_plot(sequ , o =False, a = False ):
 
     Args:
         sequ (str): DNA sequence
+        o (bool): default = False
+        a (bool): default = False
 
     Returns:
-        int: ordinate and abscissa for PR2 plot
-
+        - ordinate for PR2 plot if arg (o) is True
+        - abscissa for PR2 plot if arg (a) is True
     """
     
     import re
@@ -28,9 +30,16 @@ def PR2_plot(sequ , o =False, a = False ):
         elif i_codon[2] == 'G':
             G3 += 1
 
+    try:
+        ordinate = round ( A3 / (A3 + T3) , 2 )
+    except:
+        ordinate = 0
+    try:
+        abscissa = round ( G3 / (G3 + C3) , 2 )
+    except:
+        abscissa = 0
 
-    ordinate = round ( A3 / (A3 + T3) , 2 )
-    abscissa = round ( G3 / (G3 + C3) , 2 )
+
 
     if o and o == True:
         return ordinate

@@ -1,9 +1,9 @@
 def auto_test():
     '''
-    Run a demo test demo.
+    Run a demo test. creates a folder named "test_demo" with 23 results ( see the documentation for more details about the expected output )
 
     Returns:
-        creates a folder named "test_demo" with 23 results ( see the documentation for more details about the expected output )
+        None
     '''
     from BCAWT import BCAWT
     BCAWT.BCAW('Ecoli','test_demo',fasta=True,Auto=True)
@@ -14,10 +14,10 @@ print ("===============================")
 
 def auto_check_files():
     '''
-    Run a demo test demo.
+    Check the expected outputs.
 
     Returns:
-        check the expected outputs
+        None
     '''
     import glob
     text = [ i for i in glob.glob("Result\\test_demo\\*.txt")]

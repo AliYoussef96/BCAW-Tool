@@ -33,7 +33,10 @@ def P2_index(sequ , wwc = False, sst = False, wwy = False, ssy = False, p2 = Fal
             WWY += 1
         if i == 'CCC' or i == 'GGC' or i == 'CGC' or i == 'GCC' or i == 'CCT' or i == 'GGT' or i == 'CGT' or i == 'GCT':
             SSY += 1
-    P2 = round((WWC + SST) / (WWY + SSY), 3)
+    try:
+        P2 = round((WWC + SST) / (WWY + SSY), 3)
+    except:
+        pass
 
     if wwc and wwc == True:
         return WWC
