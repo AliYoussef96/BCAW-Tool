@@ -97,6 +97,9 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 ### Abbreviations
 [Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
 
+### Output plots description
+[Plots description](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Plots%20Description.md)
+
 ### API documentation
 
 [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)
@@ -117,4 +120,6 @@ Correspondence analysis plot for Escherichia coli codons.
 
 2- For more information about the BCAW tool and the API >> [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html).
 
-3- For more information about the description output.
+3- For more information about the output plots >> [Plots description](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Plots%20Description.md).
+
+4- For more information about the abbreviations used >> [Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
