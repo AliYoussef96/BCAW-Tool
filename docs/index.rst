@@ -12,8 +12,10 @@ Guide
    install
    Dependencies
    Contribution
+   Documentations
    License
    help
+   
    
 
 API
