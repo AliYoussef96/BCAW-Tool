@@ -76,7 +76,7 @@ BCAWT.BCAW('Ecoli','result_folder',genetic_code_=11,fasta=True,Auto=True)
 
 **genetic_code_ (int)** : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
 
-**Important Note:** BCAW tool expect coding sequences
+**Important Note:** BCAW tool expect coding sequences as input and not genes, for more information about what the difference between them you can take a look [here](https://qr.ae/TWt2gE)
 
 ### To obtain such fasta file for a species of interest
 
