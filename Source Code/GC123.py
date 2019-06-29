@@ -68,6 +68,6 @@ def GC12(sequ):
             GC2 += 1
     gc12 = GC1+GC2
     gc12 = round ( gc12 / ( len(codon) * 2 ) , 3)
-    return (gc12)
+    return gc12 ** 100
 
 
