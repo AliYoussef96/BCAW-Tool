@@ -48,9 +48,9 @@ How to create a Pull Request? [documentation on pull requests](https://help.gith
 
 **Note here we try to test the result of BCAW tool and not the modules, for testing the modules in the package use [test.py](https://github.com/AliYoussef96/BCAW-Tool/blob/master/test.py)**
 
-First download fasta file containing the coding sequence ( you can download any fasta file containing gene sequences to be analyzed from [NCBI](https://www.ncbi.nlm.nih.gov/) database for example).
+First download fasta file containing the coding sequence ( you can download any fasta file containing gene sequences to be analyzed from [NCBI](https://www.ncbi.nlm.nih.gov/) database).
 
-[Test file](https://github.com/AliYoussef96/BCAWTool/blob/master/Ecoli.fasta)
+or just download that file [Test file](https://github.com/AliYoussef96/BCAWTool/blob/master/Ecoli.fasta)
 
 then run ( It will automatically run a test on the results files ):
 
