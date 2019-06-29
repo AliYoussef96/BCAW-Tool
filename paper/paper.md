@@ -37,6 +37,6 @@ The advantages for BCAWtool over the existing tools are; 1- Automated Workflow, 
 
 ![(Fig 1)](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Ecoli.fasta_ACTG3%20violin%20plot.png)
 
-Fig. 1: ATCG3 violin plot: Explain the range of A3, T3, C3 and, G3 content as a normal box plot but also show the probability density of the data at different values.
+Fig. 1: ATCG3 violin plot: Explain the range of A3, T3, C3 and, G3 content at third codon positions as a normal box plot but also show the probability density of the data at different values.
 
 # References
