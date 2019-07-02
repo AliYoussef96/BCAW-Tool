@@ -1,4 +1,4 @@
-Documentations
+More information
 ================
 
 1- For more information about codon usage bias (CUB) and equations used to analyze CUB in the BCAW tool >> https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf
