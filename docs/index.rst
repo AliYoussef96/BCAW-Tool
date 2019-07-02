@@ -12,8 +12,8 @@ Guide
    install
    Dependencies
    Contribution
-   Documentations
    plots
+   Documentations
    License
    help
    
