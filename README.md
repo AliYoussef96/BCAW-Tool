@@ -88,7 +88,7 @@ Say that the species of interest is Escherichia coli str. K-12 substr. MG1655:
 
 3- choose one of the results ( depending on what you want in your analysis ).
 
-3- On the write of the page, you will find **send to** option. From **sent to** select **Coding Sequences** then **FASTA nucleotides** Finally, press on **Create File**
+3- On the right of the page, you will find **send to** option. From **sent to** select **Coding Sequences** then **FASTA nucleotides** Finally, press on **Create File**
 
 For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/)
 
