@@ -56,7 +56,4 @@ Visualization is the best way to present data. Hence, BCAWtool returns CSV files
 .
 ![Fig 1](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg)
 
-
-
-
 # References
