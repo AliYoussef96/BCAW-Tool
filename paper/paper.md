@@ -39,7 +39,7 @@ The advantages for BCAWtool over the existing tools are; 1- Automated Workflow, 
 
 Visualization is the best way to present data. Hence, BCAWtool returns CSV files contain the codon usage analysis and the codon usage bias indices output ( Table 1 ), after that, it returns 11 plot  (Fig 1), so one could interpret the results easily.
 
-**Table 1: Explain the CSV files output from BCAWtool**
+**Table 1: Explain the CSV files output from BCAWtool.** [( Abbreviations )](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md) 
 
 |CSV file name|Description|
 |------------|-----------|
@@ -52,8 +52,8 @@ Visualization is the best way to present data. Hence, BCAWtool returns CSV files
 | P2-index | contains ; gene id and P2 index |
 | optimal codons | contains; putative optimal codons detected |
 
-**Fig 1: All output plots from BCAWtool analysis for coding sequence from Escherichia coli**
-
+**Fig 1: All output plots from BCAWtool analysis for coding sequence from Escherichia coli.**
+.
 ![Fig 1](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg)
 
 
