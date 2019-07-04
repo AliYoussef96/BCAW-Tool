@@ -68,7 +68,7 @@ from BCAWT import BCAWT
 BCAWT.BCAW('Ecoli','result_folder',genetic_code_=11,fasta=True,Auto=True)
 >> Results Saved
 ```
-### Input
+## Input
 
 **input_the_main_fasta_file (str)** : fasta file contains DNA sequence 
 
@@ -92,7 +92,7 @@ Say that the species of interest is Escherichia coli str. K-12 substr. MG1655:
 
 For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/)
 
-### Output
+## Output
 
 **The expected CSV files output**
 
