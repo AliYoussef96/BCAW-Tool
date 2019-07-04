@@ -94,7 +94,7 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 ## Output
 
-**The expected CSV files output**
+### The expected CSV files output
 
 |CSV file name|Description|
 |------------|-----------|
@@ -108,21 +108,9 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 | optimal codons | contains; putative optimal codons detected |
 
 
+### All output plots from BCAWtool analysis for coding sequence from Escherichia coli
 
-**Fig: All output plots from BCAWtool analysis for coding sequence from Escherichia coli.**
-.
 ![Fig 1](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg)
-
-
-### Abbreviations
-[Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
-
-### Output plots description
-[Plots description](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Plots%20Description.md)
-
-### API documentation
-
-[BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)
 
 
 ## Documentations
