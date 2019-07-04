@@ -94,7 +94,25 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 ### Output
 
-![Table 1: Expected Output files](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png)
+**The expected CSV files output**
+
+|CSV file name|Description|
+|------------|-----------|
+| ATCG | contains ; gene id, GC, GC1, GC2, GC3, GC12, AT, AT3    A3, T3, C3, G3, GRAVY, AROMO and, Gene Length |
+| CA_RSCU | contains ; each RSCU result for each codon in each genes |
+| CA_RSCUcodons | contains ; correspondence analysis first 4 axis for each codon |
+| CA_RSCUgenes | contains ; correspondence analysis first 4 axis for each gene |
+| CAI | contains ; gene id and CAI index |
+| ENc | contains ; gene id and ENc index. |
+| P2-index | contains ; gene id and P2 index |
+| optimal codons | contains; putative optimal codons detected |
+
+
+
+**Fig: All output plots from BCAWtool analysis for coding sequence from Escherichia coli.**
+.
+![Fig 1](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg)
+
 
 ### Abbreviations
 [Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
@@ -106,15 +124,6 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html)
 
-## Output examples
-
-![GC violin plot: Output examples](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Escherichia%20coli%20str.%20K-12%20substr.%20MG1655.fasta_GC%20violin%20plot.png)
-
-GC violin plot: Explain the range of GC, GC1, GC2 and, GC3 content as a normal box plot but also show the probability density of the data at different values for Escherichia coli.
-
-![Correspondence analysis: Output examples](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Escherichia%20coli%20str.%20K-12%20substr.%20MG1655.fasta_CA_RSCU_CA_codos_plot.png)
-
-Correspondence analysis plot for Escherichia coli codons.
 
 ## Documentations
 
