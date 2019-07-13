@@ -37,7 +37,7 @@ The advantages for BCAWtool over the existing tools are; 1- Automated Workflow, 
 
 # Output summary
 
-Visualization is the best way to present data. Hence, BCAWtool returns CSV files contain the codon usage analysis and the codon usage bias indices output ( Table 1 ), after that, it returns 11 plot  (Fig 1), so one could interpret the results easily.
+BCAWtool returns CSV files contain the codon usage bias indices output ( Table 1 ), after that, it returns 11 plot  (Fig 1), so one could interpret the results easily.
 
 **Table 1: Explain the CSV files output from BCAWtool.** [( Abbreviations )](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md) 
 
