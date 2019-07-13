@@ -66,7 +66,7 @@ BCAWT_auto_test.auto_check_files()
 ```
 from BCAWT import BCAWT
 BCAWT.BCAW('Ecoli','result_folder',genetic_code_=11,fasta=True,Auto=True)
->> Results Saved
+
 ```
 ## Input
 
