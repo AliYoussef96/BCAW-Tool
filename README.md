@@ -117,10 +117,10 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 ## Documentations
 
-1- For more information about codon usage bias (CUB) and equations used to analyze CUB in the BCAW tool >> [Introduction to CUB](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf).
+1. For more information about codon usage bias (CUB) and equations used to analyze CUB in the BCAW tool >> [Introduction to CUB](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf).
 
-2- For more information about the BCAW tool and the API >> [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html).
+2. For more information about the BCAW tool and the API >> [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html).
 
-3- For more information about the output plots >> [Plots description](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Plots%20Description.md).
+3. For more information about the output plots >> [Plots description](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Plots%20Description.md).
 
-4- For more information about the abbreviations used >> [Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
+4. For more information about the abbreviations used >> [Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
