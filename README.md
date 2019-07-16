@@ -110,7 +110,7 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 | optimal codons | contains; putative optimal codons detected |
 
 
-### All output plots from BCAWtool analysis for coding sequence from Escherichia coli
+### All output plots from BCAW tool analysis for coding sequence from Escherichia coli
 
 ![Fig 1](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg)
 
