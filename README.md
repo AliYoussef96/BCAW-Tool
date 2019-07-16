@@ -32,6 +32,8 @@ For more details about  codon usage bias , and the equations used in BCAWT [see]
 pip install BCAWT
 ```
 
+**Note:** Python >=3.7 is required.
+
 ## Contribution Guidelines
 
 **Contributions to the software are welcome**
