@@ -1,4 +1,4 @@
-Biopython
+biopython
 pandas
 CAI
 scipy
