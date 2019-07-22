@@ -19,13 +19,18 @@ def auto_check_files():
     Returns:
         None
     '''
+    import platform
     import glob
-    text = [ i for i in glob.glob("Result\\test_demo\\*.txt")]
-    csv = [ i for i in glob.glob("Result\\test_demo\\*.csv")]
-    png = [i for i in glob.glob("Result\\test_demo\\*.png")]
+    if platform.system() == "Windows":
+        text = [ i for i in glob.glob("Result\\test_demo\\*.txt")]
+        csv = [ i for i in glob.glob("Result\\test_demo\\*.csv")]
+        png = [i for i in glob.glob("Result\\test_demo\\*.png")]
+    elif platform.system() == "Linux":
+        text = [ i for i in glob.glob("Result/test_demo/*.txt")]
+        csv = [ i for i in glob.glob("Result/test_demo/*.csv")]
+        png = [i for i in glob.glob("Result/test_demo/*.png")]
 
     if len(text) == 4 and len(csv) == 8 and len(png) == 11:
         print ("test is completed 'successfully'")
     else:
         print ("Something going wrong please, see the documentation or contact the developer")
-

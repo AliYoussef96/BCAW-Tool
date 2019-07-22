@@ -28,9 +28,9 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
 
     Notes:
         - fasta (bool): should be = True when the first arg (input_the_main_fasta_file) is fasta file.
-		
+
         - txt (bool): should be = True when the first arg (input_the_main_fasta_file) is text file.
-		
+
         - Auto (bool): should be = True to auto-generate a reference set, when arg (input_the_ref_fasta_file) not available ( = None )
 
     Returns:
@@ -81,6 +81,7 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
     import time
     from BCAWT import GRAVY_AROMO
     import sys
+    import platform
     warnings.filterwarnings("ignore", category=RuntimeWarning)
 
     file_name_list = []
@@ -159,7 +160,11 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
 
         dirname, filename = os.path.split(os.path.realpath(sys.argv[0]))
         directory = os.path.join(dirname, "Result" , save_folder_name )
-        directory = directory + "\\"
+
+        if platform.system() == "Windows":
+            directory = directory + "\\"
+        elif platform.system() == "Linux":
+            directory = directory + "/"
 
         if os.path.exists(directory) == False:
             os.makedirs(directory)
@@ -322,7 +327,7 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
 
 
             #CA_RSCU
-            ca_rscu = CA_RSCU.CA_RSCU(seq_main.seq,seq_main.id)
+            ca_rscu = CA_RSCU.CA_RSCU(seq_main.seq,seq_main.id,genetic_code_)
             df_for_each_file_CA_RSCU =pd.concat([ca_rscu, df_for_each_file_CA_RSCU], axis=1)
 
 
@@ -595,6 +600,3 @@ def BCAW(input_the_main_fasta_file,save_folder_name,input_the_ref_fasta_file=Non
                      "axis 2 Vs. AROMA = " + str(corr_CA_AROMO2[0]) + " ,p-value = " + str(corr_CA_AROMO2[1]) + "\n" )
 
         print ("Results Saved")
-
-
-
