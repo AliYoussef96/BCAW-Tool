@@ -124,7 +124,9 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 ## Documentations
 
-1. For more information about the codon usage bias (CUB), equations used to analyze CUB in the BCAW tool and the API >> [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html).
+1- An intro to the codon usage bias >> [CUB introduction](https://bcaw-tools-documentation.readthedocs.io/en/latest/intro.html)
+
+2. For more information about the equations used to analyze CUB in the BCAW tool >> [Equations](https://bcaw-tools-documentation.readthedocs.io/en/latest/intro.html#equations-used-for-codon-usage-bias-analysis)
 
 2. For more information about the output plots >> [Plots description](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/Plots%20Description.md).
 
