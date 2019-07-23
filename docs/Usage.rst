@@ -1,7 +1,8 @@
-Usage
-======
+**Usage**
+===========
 
 **Auto testing**
+------------------
 
 First download fasta file containing the coding sequence
 
@@ -18,6 +19,7 @@ then run ( It will automatically run a test on the results files ):
 	>> test is completed 'successfully'
     
 **Main Usage**
+----------------
 
 	from BCAWT import BCAWT
 	
@@ -26,6 +28,7 @@ then run ( It will automatically run a test on the results files ):
 **Important Note:** BCAW tool expect coding sequences 
 
 **Input**
+------------
 
 - main_fasta_file (list): list of string of the file's path or file-like object
 
@@ -38,7 +41,8 @@ then run ( It will automatically run a test on the results files ):
 - genetic_code_ (int) : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
 
 
-**To obtain such fasta file for a species of interest**
+**To obtain fasta file for a species of interest**
+----------------------------------------------------------
 
 Say that the species of interest is Escherichia coli str. K-12 substr. MG1655: 
 
