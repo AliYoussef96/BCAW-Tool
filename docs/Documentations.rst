@@ -1,5 +1,5 @@
-More information
-================
+**More information**
+=======================
 
 1. For more information about the codon usage bias (CUB), equations used to analyze CUB in the BCAW tool and the API >> [BCAW tool’s documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/index.html).
 
