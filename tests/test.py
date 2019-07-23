@@ -10,14 +10,16 @@ from BCAWT import P2_index
 
 def test_bad_args_BCAWT():
     # make sure bad arguments raise errors
+    with pytest.raises(ValueError):
+        BCAWT.BCAW(['Ecoli.fasta'],'test_demo', Auto=False)
+        BCAWT.BCAW(['Ecoli.fasta'], 'test_demo',["Ecoli_ref.fasta"], Auto=True)
+        BCAWT.BCAW(['Ecoli.fasta','Mp.fasta'], 'test_demo', ["Ecoli_ref.fasta"], Auto=False)
+
+
     with pytest.raises(TypeError):
-        BCAWT.BCAW('Ecoli','test_demo',fasta = True,txt = True, Auto=True) #fasta and txt = True
-    with pytest.raises(TypeError):
-        BCAWT.BCAW('Ecoli','test_demo',fasta = False,txt = False, Auto=True) #fasta and txt = False
-    with pytest.raises(TypeError):
-        BCAWT.BCAW('Ecoli','test_demo',Auto=True) #fasta and txt = False by default
-    with pytest.raises(TypeError):
-        BCAWT.BCAW('Ecoli','test_demo',"Ecoli",fasta = True,txt = True, Auto=True) #Both genes reference set and Auto are specified
+        BCAWT.BCAW(['Ecoli.fasta'], 'test_demo', "Ecoli_ref.fasta", Auto=False)
+        BCAWT.BCAW('Ecoli.fasta', 'test_demo', ["Ecoli_ref.fasta"], Auto=False)
+
 
 #make sure other modules return the true result or not
 
