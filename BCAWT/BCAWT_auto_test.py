@@ -5,12 +5,13 @@ def auto_test():
     Returns:
         None
     '''
+
     from BCAWT import BCAWT
-    BCAWT.BCAW('Ecoli','test_demo',fasta=True,Auto=True)
+    file =  open("Ecoli.fasta", "r")
+
+    BCAWT.BCAW(main_fasta_file = [file] , save_folder_name = 'test_demo',Auto=True)
 
 
-
-print ("===============================")
 
 def auto_check_files():
     '''

@@ -55,19 +55,30 @@ def GC12(sequ):
         int: GC12 value
         
     """
-    
-    import re
+
+    from itertools import tee
     from Bio.SeqUtils import GC123
     GC1 = 0
     GC2 = 0
-    codon = re.findall('...',str(sequ))
-    for i in range(len(codon)):
-        if codon[i][0] == 'G' or codon[i][0] == 'C':
+
+    sequ = str(sequ)
+    codon, codon_1 = tee(sequ[i: i + 3] for i in range(0, len(sequ), 3))
+
+    lenght_codon = sum(1 for _ in codon_1)
+
+    for i in codon:
+        if i[0] == 'G' or i[0] == 'C':
             GC1 += 1
-        if codon[i][1] == 'G' or codon[i][1] == 'C':
+        if i[1] == 'G' or i[1] == 'C':
             GC2 += 1
+
     gc12 = GC1+GC2
-    gc12 = round ( gc12 / ( len(codon) * 2 ) , 3)
-    return gc12 *100
+
+    try:
+        gc12 = round ( (gc12 / ( lenght_codon * 2 ) ) , 3)
+    except:
+        gc12 = 0
+
+    return gc12 * 100
 
 

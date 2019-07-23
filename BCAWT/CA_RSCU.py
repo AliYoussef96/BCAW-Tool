@@ -17,26 +17,24 @@ def CA_RSCU(allseq,allseq_name,The_Genetic_Codes_number=1):
     from Bio.Alphabet import generic_dna
     import pandas as pd
     from pandas import DataFrame
-    stop_start_c = ['ATG','TAA','TAG','TGA']
+    from itertools import tee
 
-    stop_start_c = []
     xcodontable = CodonTable.unambiguous_dna_by_id[1]
     ycodontable = xcodontable.forward_table
-    zcodontable = []
-    qcodontable = []
-    result = []
-    for i in ycodontable:
-        zcodontable.append(ycodontable[i])
-        qcodontable.append(i)
+    zcodontable = [ycodontable[i] for i in ycodontable]
+    qcodontable = [i for i in ycodontable ]
+
+
     for i in zcodontable:
         if zcodontable.count(i) == 1:
             zcodontable.remove(i)
     RSCU = {}
 
-    allseqstr = str(allseq)
-    allseqstr = re.findall('...',allseqstr)
-    allseqstr = [ i for i in allseqstr if i not in stop_start_c ]
-    qcodontable = [ i for i in qcodontable if i not in stop_start_c]
+    sequ = str(allseq)
+
+    allseqstr, allseqstr_1  = tee(sequ[i: i+3] for i in range(0, len(sequ), 3))
+
+    qcodontable = ( i for i in qcodontable)
     dic2 = {}
     allseqstr2 = Seq('', generic_dna)
     for i in allseqstr:
@@ -45,7 +43,7 @@ def CA_RSCU(allseq,allseq_name,The_Genetic_Codes_number=1):
     aminoacid2 = str(aminoacid2)
     RSCUall = {}
 
-    for ii in allseqstr:
+    for ii in allseqstr_1:
         dic2[ii] = dic2.get(ii,0) + 1
     for k in  qcodontable:
         RSCUall[k] = 0

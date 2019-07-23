@@ -16,10 +16,10 @@ def P2_index(sequ , wwc = False, sst = False, wwy = False, ssy = False, p2 = Fal
        - ssy value if arg(ssy) is True
        - p2 value if arg(p2) is True
     """
-    stop_start_c = ['ATG','TAA','TAG','TGA']
     import re
-    codon = re.findall('...',str(sequ))
-    codon = [i for i in codon if i not in stop_start_c]
+    sequ = str(sequ)
+    codon = (sequ[i: i+3] for i in range(0, len(sequ), 3))
+
     WWC = 0
     SST = 0
     WWY = 0

@@ -14,7 +14,7 @@ def PR2_plot(sequ , o =False, a = False ):
     
     import re
     sequ = str(sequ)
-    codon = re.findall('...',sequ)
+    codon = (sequ[i: i + 3] for i in range(0, len(sequ), 3))
     A3 = 0
     T3 = 0
     G3 = 0

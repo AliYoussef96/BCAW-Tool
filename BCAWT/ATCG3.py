@@ -19,37 +19,42 @@ def ACTG3(sequ , A = False , T = False , C = False, G = False):
 		- None if all args are False
    
     """
-    import re
+    from itertools import tee
+
     A3 = 0
     T3 = 0
     G3 = 0
     C3 = 0
-    codon = re.findall('...', str(sequ))
-    for i in range(len(codon)):
+    sequ = str(sequ)
+    codon, codon_1 = tee(sequ[i: i + 3] for i in range(0, len(sequ), 3))
+
+    lenght_codon = sum(1 for _ in codon_1)
+
+    for i in codon:
         if A and A == True:
-            if codon[i][2] == 'A':
+            if i[2] == 'A':
                 A3 += 1
         elif T and T == True:
-            if codon[i][2] == 'T':
+            if i[2] == 'T':
                 T3 += 1
         elif C and C == True:
-            if codon[i][2] == 'C':
+            if i[2] == 'C':
                 C3 += 1
         elif G and G == True:
-            if codon[i][2] == 'G':
+            if i[2] == 'G':
                 G3 += 1
 
     if A and A == True:
-        A3 = (A3 / len(codon)) * 100
+        A3 = (A3 / lenght_codon  ) * 100
         return A3
     elif T and T == True:
-        T3 = (T3 / len(codon)) * 100
+        T3 = (T3 / lenght_codon ) * 100
         return T3
     elif G and G == True:
-        G3 = (G3 / len(codon)) * 100
+        G3 = (G3 / lenght_codon ) * 100
         return G3
     elif C and C == True:
-        C3 = (C3 / len(codon)) * 100
+        C3 = (C3 / lenght_codon ) * 100
         return C3
 
 

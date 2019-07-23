@@ -1,4 +1,5 @@
 def CA(file):
+
     """correspondence analysis.
 
     Args:
@@ -15,6 +16,7 @@ def CA(file):
     import prince
     import matplotlib.pyplot as plt
 
+    file = str(file)
     df = pd.read_csv(file)
     df.set_index(df.iloc[:,0] , inplace=True)# to make the first column is the index
     df.drop(df.columns[0], axis=1,inplace= True)
@@ -46,7 +48,7 @@ def CA(file):
 
     #save information
     file_genes = file.replace(".csv",'')
-    file_genes = file_genes+ "genes"
+    file_genes = file_genes + "genes"
     file_genes = file_genes + ".csv"
     genes.rename(columns={genes.columns[0]: 'axis 1', genes.columns[1]: 'axis 2', genes.columns[2]: 'axis 3', genes.columns[3]: 'axis 4'}, inplace=True)
     genes.to_csv(file_genes,sep=',', index=True, header=True) # return csv file for genes ca result

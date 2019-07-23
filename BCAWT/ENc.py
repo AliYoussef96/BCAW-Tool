@@ -1,21 +1,22 @@
-
-import sys
-
-import argparse
-from Bio import SeqIO
 def ENcfilename(file):
-    import os
-    i_file_name_only_output = os.path.basename(file)
+    import sys
+    import argparse
+    from Bio import SeqIO
+    from pathlib import Path
 
-    file_out_put = i_file_name_only_output.replace(".fasta",'')
+    try:
+        file_out_put = Path(file).resolve().stem
+        file_out_put = file_out_put + "ENc"
+    except:
+        file_out_put = Path(file.name).resolve().stem
+        file_out_put = file_out_put + "ENc"
 
-    file_out_put = file_out_put + "ENc"
 
     parser = argparse.ArgumentParser(usage='%(prog)s [options]',
                                      description='Extracts codonusage from CDS input FASTA file. Output will be raw codon counts (.codoncnt), global ACTG counts (.actgcnt), first (.firstcnt), second (.secondcnt), third (.third) codon position counts and Relative Synonymous Codon Usage (.rscucnt). Optional different methods can be applied to calculate Effective Number of Codons (.enc).')
     parser.add_argument("-v", "--verbose", help="increase output verbosity", action="store_true")
-    parser.add_argument('-i', help='specify CDS input file in FASTA format' , default = file)
-    parser.add_argument('-o', help='specify output prefix',default = file_out_put)
+    parser.add_argument('-i', help='specify CDS input file in FASTA format' , default = None)
+    parser.add_argument('-o', help='specify output prefix',default = None)
     parser.add_argument('-r', action='store_true',
                         help='specify if CDS sequences with length modulo 3 unequal to 0 should be removed and reported to std.out')
     parser.add_argument('-enc', choices=['eq4Wright', 'eq2Sun', 'eq5Sun', 'all'], default = "eq2Sun",
@@ -24,26 +25,14 @@ def ENcfilename(file):
                         help='specify if sixfold codons should be grouped into one fourfold and one twofold group [default: False]. This will only affect calculation of ENC values.')
     args = parser.parse_args()
 
-    if args.i is None:
-        parser.print_help()
-        sys.exit('\nPlease specify input fasta file')
-    if args.o is None:
-        parser.print_help()
-        sys.exit('\nPlease specify output prefix')
-    if args.i == args.o:
-        sys.exit('\nInput file and output prefix are identical, use "out" as output prefix instead')
+############
+    infile = file
+############
 
-    print ('\ncommand arguments used:\n')
-    print (args)
+#############
+    outfile_enc = file_out_put + '.enc'
+############
 
-    infile = args.i
-    #outfile_codoncount = args.o + '.codoncnt'
-    #outfile_actgcount = args.o + '.actgcnt'
-    #outfile_firstcount = args.o + '.firstcnt'
-    #outfile_secondcount = args.o + '.secondcnt'
-    #outfile_thirdcount = args.o + '.thirdcnt'
-    #outfile_rscucount = args.o + '.rscucnt'
-    outfile_enc = args.o + '.enc'
     six2fourtwo = 'False'
     if args.six2fourtwo == 'True':
         six2fourtwo = True
@@ -63,12 +52,7 @@ def ENcfilename(file):
     global_third = actgtable()
     global_rscu = codontable()
     ids_mo3 = []
-    #with open(outfile_codoncount, "w") as codonhandle:
-     #   with open(outfile_actgcount, "w") as actghandle:
-      #      with open(outfile_firstcount, "w") as firsthandle:
-       #         with open(outfile_secondcount, "w") as secondhandle:
-        #            with open(outfile_thirdcount, "w") as thirdhandle:
-          #              with open(outfile_rscucount, "w") as rscuhandle:
+
     if args.enc is not None:
         enchandle = open(outfile_enc, "w")
         if args.enc == 'eq4Wright':
@@ -79,12 +63,7 @@ def ENcfilename(file):
             enchandle.write("id\tlen\tmo3\teq5sun\n")
         if args.enc == 'all':
             enchandle.write("id\tlen\tmo3\teq4Wright\teq2Sun\teq5Sun\n")
-          #                  codonhandle.write("id\tlen\tmo3\t" + "\t".join(sorted(global_codons.keys())) + "\n")
-           #                 actghandle.write("id\tlen\tmo3\t" + "\t".join(sorted(global_actg.keys())) + "\n")
-            #                firsthandle.write("id\tlen\tmo3\t" + "\t".join(sorted(global_first.keys())) + "\n")
-             #               secondhandle.write("id\tlen\tmo3\t" + "\t".join(sorted(global_second.keys())) + "\n")
-              #              thirdhandle.write("id\tlen\tmo3\t" + "\t".join(sorted(global_third.keys())) + "\n")
-                  #          rscuhandle.write("id\tlen\tmo3\t" + "\t".join(sorted(global_rscu.keys())) + "\n")
+
         c = 0
         cmo3 = 0
         for record in original_fasta:
@@ -146,7 +125,7 @@ def ENcfilename(file):
                         calc_eq4wright(tmp_gcbypos[2])) + "\t" + str(
                         calc_eq2sun(tmp_counts, six2fourtwo)) + "\t" + str(
                         calc_eq5sun(tmp_counts, six2fourtwo)) + "\n")
-                                
+
     print("finished writing")
     if args.r:
         print ('\n'.join(ids_mo3))
@@ -569,5 +548,3 @@ def gcbypos(codoncounts, six2fourtwo):
     if float(sum(gcthree_gc)) != 0 or float(sum(gcthree_sum)) != 0:
         gcthree = float(sum(gcthree_gc)) / float(sum(gcthree_sum))
     return [gcone, gctwo, gcthree]
-
-
