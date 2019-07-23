@@ -52,7 +52,7 @@ BCAW tool returns CSV file containing the codon usage bias indices output ( Tabl
 | P2-index | contains ; gene id and P2 index |
 | optimal codons | contains; putative optimal codons detected |
 
-Also, it returns 11 plot  (Fig 1), so one could interpret the results easily.
+Also, it returns 11 plot  ( Fig 1 ), so one could interpret the results easily.
 
 
 **Fig 1: All output plots from BCAW tool analysis for coding sequence from Escherichia coli.**
