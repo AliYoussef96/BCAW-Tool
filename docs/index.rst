@@ -7,6 +7,7 @@ Guide
 .. toctree::
    :maxdepth: 2
    
+   intro
    Statement
    Usage
    install
