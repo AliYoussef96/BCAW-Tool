@@ -41,6 +41,5 @@
 **All output plots**
 -------------------------
 
-.. figure:: https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg
-   :scale: 50 %
+.. image:: https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg
    :alt: All output plots from BCAW tool analysis for coding sequence from Escherichia coli 
