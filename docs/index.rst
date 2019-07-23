@@ -12,7 +12,6 @@ Guide
    Usage
    Dependencies
    install
-   plots
    Documentations
    Contribution
    License
