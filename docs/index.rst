@@ -13,6 +13,7 @@ Guide
    Dependencies
    install
    Documentations
+   plots
    Contribution
    License
    help
