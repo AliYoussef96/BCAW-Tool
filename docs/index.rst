@@ -10,11 +10,11 @@ Guide
    intro
    Statement
    Usage
-   install
    Dependencies
-   Contribution
+   install
    plots
    Documentations
+   Contribution
    License
    help
    
