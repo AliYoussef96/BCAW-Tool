@@ -10,6 +10,7 @@ Guide
    intro
    Statement
    Usage
+   Table_output
    Dependencies
    install
    Documentations
