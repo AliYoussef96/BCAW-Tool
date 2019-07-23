@@ -1,8 +1,9 @@
 **Dependencies**
 ================
 
+- Python >=3.7
 
-- Biopython
+- biopython
 
 - pandas
 
@@ -13,3 +14,4 @@
 - matplotlib
 
 - numpy
+
