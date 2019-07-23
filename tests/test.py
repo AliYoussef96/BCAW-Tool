@@ -1,11 +1,11 @@
 import pytest
-from BCAWT import BCAWT
-from BCAWT import ATCG3
-from BCAWT import CA_RSCU
-from BCAWT import GC123
-from BCAWT import GRAVY_AROMO
-from BCAWT import PR2_plot_data
-from BCAWT import P2_index
+from ..BCAWT import BCAWT
+from ..BCAWT import ATCG3
+from ..BCAWT import CA_RSCU
+from ..BCAWT import GC123
+from ..BCAWT import GRAVY_AROMO
+from ..BCAWT import PR2_plot_data
+from ..BCAWT import P2_index
 
 
 def test_bad_args_BCAWT():
