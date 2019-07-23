@@ -43,7 +43,7 @@
 
 |image0|
 
-.. |image0| image:: https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg
+.. |image0| image:: https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.tiff
    :width: 6.5in
    :height: 4.875in
    :alt: All output plots from BCAW tool analysis for coding sequence from Escherichia coli.
