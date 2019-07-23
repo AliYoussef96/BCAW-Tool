@@ -147,7 +147,7 @@ correspondence analysis (COA)[32,33], by plotting group of genes on
 continuous axes in multidimensional space according to the trends
 affecting the synonymous codon usage within the genes group.
 
-**references**
+**References**
 -----------------
 
 1. 	Gu W, Zhou T, Ma J, Sun X, Lu Z. Analysis of synonymous codon usage in SARS Coronavirus and other viruses in the Nidovirales. Virus Res. 2004;101: 155–161. doi:10.1016/j.virusres.2004.01.006
