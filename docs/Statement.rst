@@ -1,5 +1,5 @@
-Statement of Need
-==================
+**Statement of Need**
+======================
 There are no tools available enable users to run a whole automated workflow for codon usage bias analysis. 
 
 Using python 3.7 BCAW Tool ( Bio Codon Analysis Workflow Tool ) was developed to address this problem. 
