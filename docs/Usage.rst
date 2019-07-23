@@ -11,8 +11,8 @@ then run ( It will automatically run a test on the results files ):
 
 	from BCAWT import BCAWT_auto_test
 	
-	BCAWT_auto_test.auto_test()
-    
+	BCAWT_auto_test.auto_test(["Ecoli.fasta"])
+	
 	BCAWT_auto_test.auto_check_files()
 	
 	>> test is completed 'successfully'
@@ -20,22 +20,23 @@ then run ( It will automatically run a test on the results files ):
 **Main Usage**
 
 	from BCAWT import BCAWT
-    
-	BCAWT.BCAW('Ecoli','result_folder', genetic_code_ = 11,fasta=True,Auto=True)
 	
-    	>> Results Saved
+	BCAWT.BCAW(['Ecoli.fasta'],'result_folder',genetic_code_=11,Auto=True)
 
 **Important Note:** BCAW tool expect coding sequences 
 
 **Input**
 
-input_the_main_fasta_file (str) : fasta file contains DNA sequence 
+- main_fasta_file (list): list of string of the file's path or file-like object
 
-input_the_ref_fasta_file (str) : fasta file contains reference DNA sequence, default = None. Here Auto is True, to generate automatically reference genes set
+- save_folder_name (str): folder name where the result will be saved
 
-genetic_code_ (int) : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+- ref_fasta_file (list): list of string of the file's path or file-like object, default = None
 
-**Important Note:** BCAW tool expect coding sequences
+- Auto (bool): default = False, if ref_fasta_file not None.
+
+- genetic_code_ (int) : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+
 
 **To obtain such fasta file for a species of interest**
 
