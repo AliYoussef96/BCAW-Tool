@@ -46,7 +46,7 @@ How to create a Pull Request? [documentation on pull requests](https://help.gith
 
 ## Usage
 
-### Auto testing
+#### Auto testing
 
 **Note here we try to test the result of BCAW tool and not the modules, for testing the modules in the package use [test.py](https://github.com/AliYoussef96/BCAW-Tool/blob/master/test.py)**
 
@@ -58,29 +58,36 @@ then run ( It will automatically run a test on the results files ):
 
 ```
 from BCAWT import BCAWT_auto_test
-BCAWT_auto_test.auto_test()
+BCAWT_auto_test.auto_test(["Ecoli.fasta"])
 BCAWT_auto_test.auto_check_files()
 >> test is completed 'successfully'
 ```
 
-### Main Usage
+#### Main Usage
 
 ```
 from BCAWT import BCAWT
-BCAWT.BCAW('Ecoli','result_folder',genetic_code_=11,fasta=True,Auto=True)
+BCAWT.BCAW(['Ecoli.fasta'],'result_folder',genetic_code_=11,Auto=True)
 
 ```
 ## Input
 
-**input_the_main_fasta_file (str)** : fasta file contains DNA sequence 
+```
 
-**input_the_ref_fasta_file (str)** : fasta file contains reference DNA sequence, default = None. Here Auto is True, to generate automatically reference genes set
+main_fasta_file (list): list of string of the file's path or file-like object
 
-**genetic_code_ (int)** : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+save_folder_name (str): folder name where the result will be saved
 
+ref_fasta_file (list): list of string of the file's path or file-like object, default = None
+
+Auto (bool): default = False, if ref_fasta_file not None.
+
+genetic_code_ (int) : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+
+```
 **Important Note:** BCAW tool expect coding sequences as input and not genes, for more information about what the difference between them you can take a look [here](https://qr.ae/TWt2gE)
 
-### To obtain such fasta file for a species of interest
+#### To obtain such fasta file for a species of interest
 
 Say that the species of interest is Escherichia coli str. K-12 substr. MG1655: 
 
@@ -96,7 +103,7 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 
 ## Output
 
-### The expected CSV files output
+#### The expected CSV files output
 
 |CSV file name|Description|
 |------------|-----------|
@@ -110,7 +117,7 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 | optimal codons | contains; putative optimal codons detected |
 
 
-### All output plots from BCAW tool analysis for coding sequence from Escherichia coli
+#### All output plots from BCAW tool analysis for coding sequence from Escherichia coli
 
 ![Fig 1](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg)
 
