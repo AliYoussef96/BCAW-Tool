@@ -4,3 +4,4 @@ CAI
 scipy
 matplotlib
 numpy
+prince
