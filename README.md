@@ -27,6 +27,8 @@ For more details about  codon usage bias , and the equations used in BCAWT [see]
 
 6- numpy
 
+7- prince
+
 ## Installation Instructions
 
 
