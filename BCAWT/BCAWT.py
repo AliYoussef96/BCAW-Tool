@@ -92,12 +92,15 @@ def BCAW(main_fasta_file,save_folder_name,ref_fasta_file=None,genetic_code_ = 1,
             directory = dirname.joinpath('Result',save_folder_name)
             
         elif platform.system() == "Linux":
+
+            
+            dirname = Path(sys.argv[0]).resolve()
                         
-            try:
-                dirname = Path(sys.argv[0]).resolve()
-            except:
+            if str(Path(sys.argv[0]).name) in str(dirname):
                 dirname = Path(sys.argv[0]).resolve().parent
-                
+            else:
+                pass
+            
             directory = dirname.joinpath('Result',save_folder_name)
 
         if os.path.exists(directory) == False:
