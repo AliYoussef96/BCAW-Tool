@@ -1,6 +1,6 @@
-**Installation**
-==================
+Installation
+============
 
-*Using pip*
+Using pip::
 
 	pip install BCAWT
