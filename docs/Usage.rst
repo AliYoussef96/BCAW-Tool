@@ -1,14 +1,11 @@
-**Usage**
-===========
+Usage
+=====
 
-**Auto testing**
-------------------
+Automated testing
+-----------------
 
-First download fasta file containing the coding sequence
-
-https://github.com/AliYoussef96/BCAWTool/blob/master/Ecoli.fasta
-
-then run ( It will automatically run a test on the results files ):
+First download the `example FASTA file <https://raw.githubusercontent.com/AliYoussef96/BCAW-Tool/master/tests/Ecoli.fasta
+>` containing a coding sequence then run::
 
 	from BCAWT import BCAWT_auto_test
 	
@@ -17,42 +14,44 @@ then run ( It will automatically run a test on the results files ):
 	BCAWT_auto_test.auto_check_files()
 	
 	>> test is completed 'successfully'
+	
+to automatically run a test on the resulting files.
     
-**Main Usage**
+Main Usage
 ----------------
 
 	from BCAWT import BCAWT
 	
 	BCAWT.BCAW(['Ecoli.fasta'],'result_folder',genetic_code_=11,Auto=True)
 
-**Important Note:** BCAW tool expect coding sequences 
+**Important Note:** BCAW Tool expects coding sequences 
 
-**Input**
+Input
 ------------
 
-- main_fasta_file (list): list of string of the file's path or file-like object
+- ``main_fasta_file`` (list): list of string of the file's path or file-like object
 
-- save_folder_name (str): folder name where the result will be saved
+- ``save_folder_name`` (str): folder name where the result will be saved
 
-- ref_fasta_file (list): list of string of the file's path or file-like object, default = None
+- ``ref_fasta_file`` (list): list of string of the file's path or file-like object, default = None
 
-- Auto (bool): default = False, if ref_fasta_file not None.
+- ``Auto`` (bool): default = False, if ``ref_fasta_file`` is not None.
 
-- genetic_code_ (int) : default = 1, The Genetic Codes number described by [NCBI](https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi)
+- ``genetic_code`` (int): default = 1, the genetic code ID from `the NCBI table <https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi>`_
 
 
-**To obtain fasta file for a species of interest**
-----------------------------------------------------------
+To obtain FASTA file for a species of interest
+----------------------------------------------
 
-Say that the species of interest is Escherichia coli str. K-12 substr. MG1655: 
+Say that the species of interest is *Escherichia coli* str. K-12 substr. MG1655: 
 
-1- Go to the NCBI database.
+1. Go to the NCBI's `database <https://ncbi.nlm.nih/gov>`_.
 
-2- In the search bar write ( Escherichia coli str. K-12 substr. MG1655, complete genome ).
+2. In the search bar write ``Escherichia coli str. K-12 substr. MG1655, complete genome``.
 
-3- choose one of the results ( depending on what you want in your analysis ).
+3. Choose one of the results (depending on what you want in your analysis).
 
-3- On the write of the page, you will find **send to** option. From **sent to** select **Coding Sequences** then **FASTA nucleotides** Finally, press on **Create File**
+3. On the write of the page, you will find **send to** option. From **sent to** select **Coding Sequences** then **FASTA nucleotides** Finally, press on **Create File**
 
-For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/)
+For NCBI Genomes Download questions, see their `FAQ <https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/>`_.
 
