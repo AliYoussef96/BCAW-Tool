@@ -5,7 +5,7 @@ Automated testing
 -----------------
 
 First download the `example FASTA file <https://raw.githubusercontent.com/AliYoussef96/BCAW-Tool/master/tests/Ecoli.fasta
->` containing a coding sequence then run::
+>`_ containing a coding sequence then run::
 
 	from BCAWT import BCAWT_auto_test
 	
