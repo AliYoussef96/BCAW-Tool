@@ -1,15 +1,15 @@
-**Dependencies**
-================
+Dependencies
+============
 
-- biopython
+- Biopython
 
-- pandas
+- Pandas
 
 - CAI
 
-- scipy
+- SciPy
 
-- matplotlib
+- Matplotlib
 
-- numpy
+- NumPy
 
