@@ -3,6 +3,8 @@
 [![Build Status](https://travis-ci.org/AliYoussef96/BCAW-Tool.svg?branch=master)](https://travis-ci.org/AliYoussef96/BCAW-Tool)
 [![Documentation Status](https://readthedocs.org/projects/bcaw-tools-documentation/badge/?version=latest)](https://bcaw-tools-documentation.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/BCAWT.svg)](https://badge.fury.io/py/BCAWT)
+[![status](http://joss.theoj.org/papers/5c17f813c2eca6b9d7c4ecf5d2ea97e9/status.svg)](http://joss.theoj.org/papers/5c17f813c2eca6b9d7c4ecf5d2ea97e9)
+
 
 ## Statement of Need
 
