@@ -149,87 +149,38 @@ affecting the synonymous codon usage within the genes group.
 
 References
 ----------
-1. Gu W, Zhou T, Ma J, Sun X, Lu Z. Analysis of synonymous codon usage
-in SARS Coronavirus and other viruses in the Nidovirales. Virus Res.
-2004;101: 155–161. doi:10.1016/j.virusres.2004.01.0062. Vicario S,
-Moriyama EN, Powell JR. Codon usage in twelve species of Drosophila. BMC
-Evol Biol. 2007;7: 1–17. doi:10.1186/1471-2148-7-2263. Behura SK,
-Severson DW. Comparative analysis of Codon usage bias and Codon context
-patterns between dipteran and hymenopteran sequenced genomes. PLoS One.
-2012;7. doi:10.1371/journal.pone.00431114. Boël G, Letso R, Neely H,
-Price WN, Su M, Luff J, et al. Codon influence on protein expression in
-E.coli. 2016;529: 358–363. doi:10.1038/nature16509.Codon5. Dohra H,
-Fujishima M, Suzuki H. Analysis of amino acid and codon usage in
-Paramecium bursaria. FEBS Lett. Federation of European Biochemical
-Societies; 2015;589: 3113–3118. doi:10.1016/j.febslet.2015.08.0336. Qiu
-S, Zeng K, Slotte T, Wright S, Charlesworth D. Reduced efficacy of
-natural selection on codon usage bias in selfing Arabidopsis and
-Capsella species. Genome Biol Evol. 2011;3: 868–880.
-doi:10.1093/gbe/evr0857. Wang L, Xing H, Yuan Y, Wang X, Saeed M, Tao J,
-et al. Genome-wide analysis of codon usage bias in four sequenced cotton
-species. PLoS One. 2018; 1–17. doi:10.1371/journal.pone.01943728. Chen
-H, Sun S, Norenburg JL, Sundberg P. Mutation and selection cause codon
-usage and bias in mitochondrial genomes of ribbon worms (Nemertea). PLoS
-One. 2014;9. doi:10.1371/journal.pone.00856319. Zalucki YM, Power PM,
-Jennings MP. Selection for efficient translation initiation biases codon
-usage at second amino acid position in secretory proteins. Nucleic Acids
-Res. 2007;35: 5748–5754. doi:10.1093/nar/gkm57710. Prabha R, Singh DP,
-Sinha S, Ahmad K, Rai A. Genome-wide comparative analysis of codon usage
-bias and codon context patterns among cyanobacterial genomes. Mar
-Genomics. Elsevier B.V.; 2017;32: 31–39.
-doi:10.1016/j.margen.2016.10.00111. Palidwor GA, Perkins TJ, Xia X. A
-general model of Codon bias due to GC mutational bias. PLoS One. 2010;5.
-doi:10.1371/journal.pone.001343112. Marais G, Mouchiroud D, Duret L.
-Neutral effect of recombination on base composition in Drosophila. Genet
-Res. 2003;81: 79–87. doi:10.1017/S001667230200607913. Rocha EPC. Codon
-usage bias from tRNA’s point of view: Redundancy, specialization, and
-efficient decoding for translation optimization. Genome Res. 2004;
-2279–2286. doi:10.1101/gr.289690414. Huang Y, Koonin E V., Lipman DJ,
-Przytycka TM. Selection for minimization of translational frameshifting
-errors as a factor in the evolution of codon usage. Nucleic Acids Res.
-2009;37: 6799–6810. doi:10.1093/nar/gkp71215. Duret L, Mouchiroud D.
-Expression pattern and, surprisingly, gene length shape codon usage in
-Caenorhabditis, Drosophila, and Arabidopsis. Proc Natl Acad Sci U S A.
-1999;96: 4482–7. Available:
-http://www.ncbi.nlm.nih.gov/pubmed/10200288%0Ahttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC1635816.
-Hiraoka Y, Kawamata K, Haraguchi T, Chikashige Y. Codon usage bias is
-correlated with gene expression levels in the fission yeast
-Schizosaccharomyces pombe. Genes to Cells. 2009;14: 499–509.
-doi:10.1111/j.1365-2443.2009.01284.x17. Pandit A, Sinha S. Differential
-trends in the codon usage patterns in HIV-1 genes. PLoS One. 2011;6:
-1–10. doi:10.1371/journal.pone.002888918. Liu H, He R, Zhang H, Huang Y,
-Tian M, Zhang J. Analysis of synonymous codon usage in Zea mays. Mol
-Biol Rep. 2010;37: 677–684. doi:10.1007/s11033-009-9521-719. Wright F.
-The “effective number of codons” used in a gene. Gene. 1990;87: 23–29.
-20. Sun X, Yang Q, Xia X. An improved implementation of effective number
-of codons (Nc). Mol Biol Evol. 2013;30: 191–196.
-doi:10.1093/molbev/mss20121. Sharp PM, Li W. Codon Adaptation Index and
-its potential applications Nucleic Acids Research. 1987;15: 1281–1295.
-22. Ran W, Higgs PG. Contributions of Speed and Accuracy to
-Translational Selection in Bacteria. PLoS One. 2012;7.
-doi:10.1371/journal.pone.005165223. Sharpl PM, Li W. potential
-applications Nucleic Acids Research. Nucleic Acids Res. 1987;15:
-1281–1295. 24. Lee. Python Implementation of Codon Adaptation Index. J
-Open Source Softw. 2018;3: 905. doi:10.21105/joss.0090525. Chakraborty
-S, Nag D, Mazumder TH, Uddin A. Codon usage pattern and prediction of
-gene expression level in Bungarus species. Gene. Elsevier B.V.; 2016;
-doi:10.1016/j.gene.2016.11.02326. Gatherer D, McEwan N. SMALL REGIONS OF
-PREFERENTIAL CODON USAGE AND THEIR EFFECT ON OVERALL CODON BIAS - THE
-CASE OF THE plp GENE. Biochem Mol Biol Int. 1997;43: 107–114.
-doi:doi.org/10.1080/1521654970020387127. Choudhury MN, Uddin A,
-Chakraborty S. Nucleotide composition and codon usage bias of SRY gene.
-Andrologia. 2018;50: 1–11. doi:10.1111/and.1278728. Rao Y, Wang Z, Chai
-X, Nie Q, Zhang X. Hydrophobicity and aromaticity are primary factors
-shaping variation in amino acid usage of chicken proteome. PLoS One.
-2014;9. doi:10.1371/journal.pone.011038129. Chen Y, Li X, Chi X, Wang S,
-Ma Y, Chen J. Comprehensive analysis of the codon usage patterns in the
-envelope glycoprotein E2 gene of the classical swine fever virus. PLoS
-One. 2017; 1–14. doi:10.1371/journal. pone.018364630. Sueoka N.
-Intrastrand parity rules of DNA base composition and usage biases of
-synonymous codons. J Mol Evol. 1995;40: 318–325.
-doi:10.1007/BF0016323631. Sueoka N. Near Homogeneity of PR2-Bias
-Fingerprints in the Human Genome and Their Implications in Phylogenetic
-Analyses. Mol Evol. 2001; 469–476. doi:10.1007/s00239001023732. Usage C.
-Letter to the Editor Codon Usage and the Origin of P Elements. Mol Biol
-Evol. 1994; 1994–1995. 33. Drosophila I. Evidence that Mutation Patterns
-Vary Among Drosophila Transposable Elements. J Mol Biol. 1989; 843–846.
+
+1. 	Gu W, Zhou T, Ma J, Sun X, Lu Z. Analysis of synonymous codon usage in SARS Coronavirus and other viruses in the Nidovirales. Virus Res. 2004;101: 155–161. doi:10.1016/j.virusres.2004.01.006
+2. 	Vicario S, Moriyama EN, Powell JR. Codon usage in twelve species of Drosophila. BMC Evol Biol. 2007;7: 1–17. doi:10.1186/1471-2148-7-226
+3. 	Behura SK, Severson DW. Comparative analysis of Codon usage bias and Codon context patterns between dipteran and hymenopteran sequenced genomes. PLoS One. 2012;7. doi:10.1371/journal.pone.0043111
+4. 	Boël G, Letso R, Neely H, Price WN, Su M, Luff J, et al. Codon influence on protein expression in E.coli. 2016;529: 358–363. doi:10.1038/nature16509.Codon
+5. 	Dohra H, Fujishima M, Suzuki H. Analysis of amino acid and codon usage in Paramecium bursaria. FEBS Lett. Federation of European Biochemical Societies; 2015;589: 3113–3118. doi:10.1016/j.febslet.2015.08.033
+6. 	Qiu S, Zeng K, Slotte T, Wright S, Charlesworth D. Reduced efficacy of natural selection on codon usage bias in selfing Arabidopsis and Capsella species. Genome Biol Evol. 2011;3: 868–880. doi:10.1093/gbe/evr085
+7. 	Wang L, Xing H, Yuan Y, Wang X, Saeed M, Tao J, et al. Genome-wide analysis of codon usage bias in four sequenced cotton species. PLoS One. 2018; 1–17. doi:10.1371/journal.pone.0194372
+8. 	Chen H, Sun S, Norenburg JL, Sundberg P. Mutation and selection cause codon usage and bias in mitochondrial genomes of ribbon worms (Nemertea). PLoS One. 2014;9. doi:10.1371/journal.pone.0085631
+9. 	Zalucki YM, Power PM, Jennings MP. Selection for efficient translation initiation biases codon usage at second amino acid position in secretory proteins. Nucleic Acids Res. 2007;35: 5748–5754. doi:10.1093/nar/gkm577
+10. 	Prabha R, Singh DP, Sinha S, Ahmad K, Rai A. Genome-wide comparative analysis of codon usage bias and codon context patterns among cyanobacterial genomes. Mar Genomics. Elsevier B.V.; 2017;32: 31–39. doi:10.1016/j.margen.2016.10.001
+11. 	Palidwor GA, Perkins TJ, Xia X. A general model of Codon bias due to GC mutational bias. PLoS One. 2010;5. doi:10.1371/journal.pone.0013431
+12. 	Marais G, Mouchiroud D, Duret L. Neutral effect of recombination on base composition in Drosophila. Genet Res. 2003;81: 79–87. doi:10.1017/S0016672302006079
+13. 	Rocha EPC. Codon usage bias from tRNA’s point of view: Redundancy, specialization, and efficient decoding for translation optimization. Genome Res. 2004; 2279–2286. doi:10.1101/gr.2896904
+14. 	Huang Y, Koonin E V., Lipman DJ, Przytycka TM. Selection for minimization of translational frameshifting errors as a factor in the evolution of codon usage. Nucleic Acids Res. 2009;37: 6799–6810. doi:10.1093/nar/gkp712
+15. 	Duret L, Mouchiroud D. Expression pattern and, surprisingly, gene length shape codon usage in Caenorhabditis, Drosophila, and Arabidopsis. Proc Natl Acad Sci U S A. 1999;96: 4482–7. Available: http://www.ncbi.nlm.nih.gov/pubmed/10200288%0Ahttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC16358
+16. 	Hiraoka Y, Kawamata K, Haraguchi T, Chikashige Y. Codon usage bias is correlated with gene expression levels in the fission yeast Schizosaccharomyces pombe. Genes to Cells. 2009;14: 499–509. doi:10.1111/j.1365-2443.2009.01284.x
+17. 	Pandit A, Sinha S. Differential trends in the codon usage patterns in HIV-1 genes. PLoS One. 2011;6: 1–10. doi:10.1371/journal.pone.0028889
+18. 	Liu H, He R, Zhang H, Huang Y, Tian M, Zhang J. Analysis of synonymous codon usage in Zea mays. Mol Biol Rep. 2010;37: 677–684. doi:10.1007/s11033-009-9521-7
+19. 	Wright F. The “effective number of codons” used in a gene. Gene. 1990;87: 23–29. 
+20. 	Sun X, Yang Q, Xia X. An improved implementation of effective number of codons (Nc). Mol Biol Evol. 2013;30: 191–196. doi:10.1093/molbev/mss201
+21. 	Sharp PM, Li W. Codon Adaptation Index and its potential applications Nucleic Acids Research. 1987;15: 1281–1295. 
+22. 	Ran W, Higgs PG. Contributions of Speed and Accuracy to Translational Selection in Bacteria. PLoS One. 2012;7. doi:10.1371/journal.pone.0051652
+23. 	Sharpl PM, Li W. potential applications Nucleic Acids Research. Nucleic Acids Res. 1987;15: 1281–1295. 
+24. 	Lee. Python Implementation of Codon Adaptation Index. J Open Source Softw. 2018;3: 905. doi:10.21105/joss.00905
+25. 	Chakraborty S, Nag D, Mazumder TH, Uddin A. Codon usage pattern and prediction of gene expression level in Bungarus species. Gene. Elsevier B.V.; 2016; doi:10.1016/j.gene.2016.11.023
+26. 	Gatherer D, McEwan N. SMALL REGIONS OF PREFERENTIAL CODON USAGE AND THEIR EFFECT ON OVERALL CODON BIAS - THE CASE OF THE plp GENE. Biochem Mol Biol Int. 1997;43: 107–114. doi:doi.org/10.1080/15216549700203871
+27. 	Choudhury MN, Uddin A, Chakraborty S. Nucleotide composition and codon usage bias of SRY gene. Andrologia. 2018;50: 1–11. doi:10.1111/and.12787
+28. 	Rao Y, Wang Z, Chai X, Nie Q, Zhang X. Hydrophobicity and aromaticity are primary factors shaping variation in amino acid usage of chicken proteome. PLoS One. 2014;9. doi:10.1371/journal.pone.0110381
+29. 	Chen Y, Li X, Chi X, Wang S, Ma Y, Chen J. Comprehensive analysis of the codon usage patterns in the envelope glycoprotein E2 gene of the classical swine fever virus. PLoS One. 2017; 1–14. doi:10.1371/journal. pone.0183646
+30. 	Sueoka N. Intrastrand parity rules of DNA base composition and usage biases of synonymous codons. J Mol Evol. 1995;40: 318–325. doi:10.1007/BF00163236
+31. 	Sueoka N. Near Homogeneity of PR2-Bias Fingerprints in the Human Genome and Their Implications in Phylogenetic Analyses. Mol Evol. 2001; 469–476. doi:10.1007/s002390010237
+32. 	Usage C. Letter to the Editor Codon Usage and the Origin of P Elements. Mol Biol Evol. 1994; 1994–1995. 
+33. 	Drosophila I. Evidence that Mutation Patterns Vary Among Drosophila Transposable Elements. J Mol Biol. 1989; 843–846. 
+
