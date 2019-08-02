@@ -12,7 +12,7 @@ There are no tools available enable users to run a whole automated workflow for 
 BCAW Tool manages a complete automated workflow to analyze the codon usage bias for genes and genomes of any organism. With minimum coding skills.
 
 
-For more details about  codon usage bias , and the equations used in BCAWT [see](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Introduction%20to%20codon%20usage%20bias.pdf).
+For more details about  codon usage bias , and the equations used in BCAWT [see](https://bcaw-tools-documentation.readthedocs.io/en/latest/intro.html.
 
 
 ## Dependencies
