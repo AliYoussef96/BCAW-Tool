@@ -23,7 +23,7 @@ copyright = '2019, Ali Mostafa'
 author = 'Ali Mostafa'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.0'
+release = '1.0.0'
 
 
 # -- General configuration ---------------------------------------------------
