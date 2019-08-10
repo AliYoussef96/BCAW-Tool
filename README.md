@@ -64,16 +64,15 @@ or just download that file [Test file](https://github.com/AliYoussef96/BCAW-Tool
 
 then run ( It will automatically run a test on the results files ):
 
-```
+```python
 from BCAWT import BCAWT_auto_test
 BCAWT_auto_test.auto_test(["Ecoli.fasta"])
 BCAWT_auto_test.auto_check_files()
->> test is completed 'successfully'
 ```
 
 #### Main Usage
 
-```
+```python
 from BCAWT import BCAWT
 BCAWT.BCAW(['Ecoli.fasta'],'result_folder',genetic_code_=11,Auto=True)
 
