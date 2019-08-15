@@ -7,7 +7,7 @@ Guide
 .. toctree::
    :maxdepth: 2
    
-   intro
+   Intro
    statement
    Usage
    Table_output
