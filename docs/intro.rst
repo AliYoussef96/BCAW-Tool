@@ -121,10 +121,8 @@ Genes with high expression level within the organims genomes are
 ussually named reference gene sets. Reference gene sets are used to
 calculate the CAI. In BCAWT two options may be used:
 
-1. Reference genes set given by the users.
-
-2. An auto option where BCAWT generates a genes reference set using 10%
-of genes have the lowest ENc values (highest biased genes).
+1.  Reference genes set given by the users.
+2.  An auto option where BCAWT generates a genes reference set using 10% of genes have the lowest ENc values (highest biased genes).
 
 Determination of putative optimal codons
 ________________________________________
@@ -150,7 +148,7 @@ affecting the synonymous codon usage within the genes group.
 References
 ----------
 
-1. 	Gu W, Zhou T, Ma J, Sun X, Lu Z. Analysis of synonymous codon usage in SARS Coronavirus and other viruses in the Nidovirales. Virus Res. 2004;101: 155–161. doi:10.1016/j.virusres.2004.01.006
+1.  Gu W, Zhou T, Ma J, Sun X, Lu Z. Analysis of synonymous codon usage in SARS Coronavirus and other viruses in the Nidovirales. Virus Res. 2004;101: 155–161. doi:10.1016/j.virusres.2004.01.006
 2. 	Vicario S, Moriyama EN, Powell JR. Codon usage in twelve species of Drosophila. BMC Evol Biol. 2007;7: 1–17. doi:10.1186/1471-2148-7-226
 3. 	Behura SK, Severson DW. Comparative analysis of Codon usage bias and Codon context patterns between dipteran and hymenopteran sequenced genomes. PLoS One. 2012;7. doi:10.1371/journal.pone.0043111
 4. 	Boël G, Letso R, Neely H, Price WN, Su M, Luff J, et al. Codon influence on protein expression in E.coli. 2016;529: 358–363. doi:10.1038/nature16509.Codon
