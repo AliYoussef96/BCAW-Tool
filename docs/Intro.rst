@@ -58,7 +58,7 @@ expression levels and natural selection; it ranges from 0 to 1 with
 higher values indicating stronger bias with respect to the reference
 set, therefore this method is an indicator of selection for a bias
 toward translational efficiency [21, 22]. Codon adaptation index (CAI)
-was calculated by the equation given by [23, 24]:
+was calculated by the equation given by [22, 23]:
 
 .. math:: CAI = exp\frac{1}{L}\sum_{k = 1}^{L}{\ln w_{c(k)}}
 
@@ -83,10 +83,10 @@ Translational selection index
 _____________________________
 
 Translational selection (P2) index measure the bias of anticodon-codon
-interactions, from which we can indicate the translation efficiency [25].
+interactions, from which we can indicate the translation efficiency [24].
 Generally P2-index ranges from 0 to 1. Its values have been
 noted to be high for highly expressed genes and low for lowly expressed
-genes [7,26]. i [25]By taking the averages of numbers resulted from this
+genes [7,25]. i [24]By taking the averages of numbers resulted from this
 equation for each CDS:
 
 .. math:: P2 = \ \frac{WWC + SSU}{WWY + SSY}
@@ -98,7 +98,7 @@ ______________________________________________________
 
 In analyzing the natural selection for shaping the codon usage bias, two
 indices, including Gravy and Aroma scores, were used in many studies
-[27–29]. Thus, the variation of the two indices reflects the amino acid
+[26–28]. Thus, the variation of the two indices reflects the amino acid
 usage. A higher Gravy or Aroma value suggests a more hydrophobic or
 aromatic amino acid product.
 
@@ -109,10 +109,10 @@ All the nucleotides content at the third codon position (A3, T3, G3, and
 C3) were calculated, then for each gene AT-bias (A3/(A3 + T3)) and
 GC-bias (G3/(G3 + C3)) were estimated and used as the ordinate and the
 abscissa respectively in the plot, with both coordinates equal to 0.5,
-where A = T and G = C [30]. The genes positions on the plot along the
+where A = T and G = C [29]. The genes positions on the plot along the
 ordinate and the abscissa tell about factors influence the CUB. If genes
 over the plot view are scattered equally, then the CUB is likely to be
-solely caused by the mutation [31].
+solely caused by the mutation [30].
 
 Establish reference genes set
 _____________________________
@@ -141,7 +141,7 @@ _______________________
 Excluding Met and Trp codons, it is an advantage to perform multivariate
 statistical analysis on the rest of 59 codons to examine the variations
 in the codon usage bias among all the CDSs. One way to do that is
-correspondence analysis (COA)[32,33] by plotting groups of genes on
+correspondence analysis (COA)[31,32] by plotting groups of genes on
 continuous axes in multidimensional space according to the trends
 affecting the synonymous codon usage within the genes group.
 
