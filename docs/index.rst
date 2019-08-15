@@ -8,7 +8,7 @@ Guide
    :maxdepth: 2
    
    intro
-   Statement
+   statement
    Usage
    Table_output
    Dependencies
