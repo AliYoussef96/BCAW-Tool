@@ -164,23 +164,22 @@ References
 12. 	Marais G, Mouchiroud D, Duret L. Neutral effect of recombination on base composition in Drosophila. Genet Res. 2003;81: 79–87. doi:10.1017/S0016672302006079
 13. 	Rocha EPC. Codon usage bias from tRNA’s point of view: Redundancy, specialization, and efficient decoding for translation optimization. Genome Res. 2004; 2279–2286. doi:10.1101/gr.2896904
 14. 	Huang Y, Koonin E V., Lipman DJ, Przytycka TM. Selection for minimization of translational frameshifting errors as a factor in the evolution of codon usage. Nucleic Acids Res. 2009;37: 6799–6810. doi:10.1093/nar/gkp712
-15. 	Duret L, Mouchiroud D. Expression pattern and, surprisingly, gene length shape codon usage in Caenorhabditis, Drosophila, and Arabidopsis. Proc Natl Acad Sci U S A. 1999;96: 4482–7. Available: http://www.ncbi.nlm.nih.gov/pubmed/10200288%0Ahttp://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=PMC16358
+15. 	Duret L, Mouchiroud D. Expression pattern and, surprisingly, gene length shape codon usage in Caenorhabditis, Drosophila, and Arabidopsis. Proc Natl Acad Sci U S A. 1999;96: 4482–7. Available: https://www.ncbi.nlm.nih.gov/pubmed/10200288
 16. 	Hiraoka Y, Kawamata K, Haraguchi T, Chikashige Y. Codon usage bias is correlated with gene expression levels in the fission yeast Schizosaccharomyces pombe. Genes to Cells. 2009;14: 499–509. doi:10.1111/j.1365-2443.2009.01284.x
 17. 	Pandit A, Sinha S. Differential trends in the codon usage patterns in HIV-1 genes. PLoS One. 2011;6: 1–10. doi:10.1371/journal.pone.0028889
 18. 	Liu H, He R, Zhang H, Huang Y, Tian M, Zhang J. Analysis of synonymous codon usage in Zea mays. Mol Biol Rep. 2010;37: 677–684. doi:10.1007/s11033-009-9521-7
-19. 	Wright F. The “effective number of codons” used in a gene. Gene. 1990;87: 23–29. 
+19. 	Wright F. The “effective number of codons” used in a gene. Gene. 1990;87: 23–29. doi:10.1016/0378-1119(90)90491-9
 20. 	Sun X, Yang Q, Xia X. An improved implementation of effective number of codons (Nc). Mol Biol Evol. 2013;30: 191–196. doi:10.1093/molbev/mss201
 21. 	Sharp PM, Li W. Codon Adaptation Index and its potential applications Nucleic Acids Research. 1987;15: 1281–1295. 
-22. 	Ran W, Higgs PG. Contributions of Speed and Accuracy to Translational Selection in Bacteria. PLoS One. 2012;7. doi:10.1371/journal.pone.0051652
-23. 	Sharpl PM, Li W. potential applications Nucleic Acids Research. Nucleic Acids Res. 1987;15: 1281–1295. 
-24. 	Lee. Python Implementation of Codon Adaptation Index. J Open Source Softw. 2018;3: 905. doi:10.21105/joss.00905
-25. 	Chakraborty S, Nag D, Mazumder TH, Uddin A. Codon usage pattern and prediction of gene expression level in Bungarus species. Gene. Elsevier B.V.; 2016; doi:10.1016/j.gene.2016.11.023
-26. 	Gatherer D, McEwan N. SMALL REGIONS OF PREFERENTIAL CODON USAGE AND THEIR EFFECT ON OVERALL CODON BIAS - THE CASE OF THE plp GENE. Biochem Mol Biol Int. 1997;43: 107–114. doi:doi.org/10.1080/15216549700203871
-27. 	Choudhury MN, Uddin A, Chakraborty S. Nucleotide composition and codon usage bias of SRY gene. Andrologia. 2018;50: 1–11. doi:10.1111/and.12787
-28. 	Rao Y, Wang Z, Chai X, Nie Q, Zhang X. Hydrophobicity and aromaticity are primary factors shaping variation in amino acid usage of chicken proteome. PLoS One. 2014;9. doi:10.1371/journal.pone.0110381
-29. 	Chen Y, Li X, Chi X, Wang S, Ma Y, Chen J. Comprehensive analysis of the codon usage patterns in the envelope glycoprotein E2 gene of the classical swine fever virus. PLoS One. 2017; 1–14. doi:10.1371/journal. pone.0183646
-30. 	Sueoka N. Intrastrand parity rules of DNA base composition and usage biases of synonymous codons. J Mol Evol. 1995;40: 318–325. doi:10.1007/BF00163236
-31. 	Sueoka N. Near Homogeneity of PR2-Bias Fingerprints in the Human Genome and Their Implications in Phylogenetic Analyses. Mol Evol. 2001; 469–476. doi:10.1007/s002390010237
-32. 	Usage C. Letter to the Editor Codon Usage and the Origin of P Elements. Mol Biol Evol. 1994; 1994–1995. 
-33. 	Drosophila I. Evidence that Mutation Patterns Vary Among Drosophila Transposable Elements. J Mol Biol. 1989; 843–846. 
+22. 	Ran W, Higgs PG. Contributions of Speed and Accuracy to Translational Selection in Bacteria. PLoS One. 2012;7. doi:10.1371/journal.pone.0051652. doi:10.1093/nar/15.3.1281
+23. 	Lee, B. D. (2018). Python Implementation of Codon Adaptation Index. Journal of Open Source Software, 3 (30), 905.  doi:10.21105/joss.00905
+24. 	Chakraborty S, Nag D, Mazumder TH, Uddin A. Codon usage pattern and prediction of gene expression level in Bungarus species. Gene. Elsevier B.V.; 2016; doi:10.1016/j.gene.2016.11.023
+25. 	Gatherer D, Mcewan N. Small regions of preferential codon usage and their effect on overall codon bias - the case of the plp gene. biochem mol biol int. 1997;43: 107–114. doi:10.1080/15216549700203871
+26. 	Choudhury MN, Uddin A, Chakraborty S. Nucleotide composition and codon usage bias of SRY gene. Andrologia. 2018;50: 1–11. doi:10.1111/and.12787
+27. 	Rao Y, Wang Z, Chai X, Nie Q, Zhang X. Hydrophobicity and aromaticity are primary factors shaping variation in amino acid usage of chicken proteome. PLoS One. 2014;9. doi:10.1371/journal.pone.0110381
+28. 	Chen Y, Li X, Chi X, Wang S, Ma Y, Chen J. Comprehensive analysis of the codon usage patterns in the envelope glycoprotein E2 gene of the classical swine fever virus. PLoS One. 2017; 1–14. doi:10.1371/journal. pone.0183646
+29. 	Sueoka N. Intrastrand parity rules of DNA base composition and usage biases of synonymous codons. J Mol Evol. 1995;40: 318–325. doi:10.1007/BF00163236
+30. 	Sueoka N. Near Homogeneity of PR2-Bias Fingerprints in the Human Genome and Their Implications in Phylogenetic Analyses. Mol Evol. 2001; 469–476. doi:10.1007/s002390010237
+31. 	Emmanuelle Lerat, Christian Biémont, Pierre Capy, Codon Usage and the Origin of P Elements, Molecular Biology and Evolution, Volume 17, Issue 3, March 2000, Pages 467–468. doi:10.1093/oxfordjournals.molbev.a026326
+32. 	Denis C.ShieldsPaul M.Sharp. Drosophila I. Evidence that Mutation Patterns Vary Among Drosophila Transposable Elements. J Mol Biol. 1989; 843–846. doi:10.1016/0022-2836(89)90252-0
 
