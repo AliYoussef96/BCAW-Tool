@@ -1,4 +1,4 @@
-def BCAW(main_fasta_file,save_folder_name,ref_fasta_file=None,genetic_code_ = 1,Auto=False):
+def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Auto=False):
 
     """
     BCAWT ( Bio Codon Analysis Workflow Tool ), it manages a complete workflow to analysis
@@ -8,7 +8,7 @@ def BCAW(main_fasta_file,save_folder_name,ref_fasta_file=None,genetic_code_ = 1,
 
         main_fasta_file (list): list of string of the file's path or file-like object
 
-        save_folder_name (str): folder name where the result will be saved
+        save_path (str): absolute path to the directory to save the result in, default = the current directory
 
         ref_fasta_file (list): list of string of the file's path or file-like object, default = None
 
@@ -22,7 +22,7 @@ def BCAW(main_fasta_file,save_folder_name,ref_fasta_file=None,genetic_code_ = 1,
 
     Returns:
 
-       for details see: github.com/AliYoussef96/BCAW-Tool/blob/master/Table.png
+       for details see: https://bcaw-tools-documentation.readthedocs.io/en/latest/Table_output.html
 
     """
 
@@ -82,34 +82,11 @@ def BCAW(main_fasta_file,save_folder_name,ref_fasta_file=None,genetic_code_ = 1,
     ############## creating result folder
     ##################################
 
-    while True:
-        file_name_exist = 0
-        # creat folder where result will be saved
-
-        if platform.system() == "Windows":
-            
-            dirname = Path(sys.argv[0]).resolve().parent
-            directory = dirname.joinpath('Result',save_folder_name)
-            
-        elif platform.system() == "Linux":
-
-            
-            dirname = Path(sys.argv[0]).resolve()
-                        
-            if str(Path(sys.argv[0]).name) in str(dirname):
-                dirname = Path(sys.argv[0]).resolve().parent
-            else:
-                pass
-            
-            directory = dirname.joinpath('Result',save_folder_name)
-
-        if os.path.exists(directory) == False:
-            os.makedirs(directory)
-            Path(directory).mkdir(parents=True, exist_ok=True)
-            break
-        else:
-            raise TypeError ("The folder is already exist")
-
+    if save_path == str():
+        directory = Path().absolute()
+    else:
+        directory = Path(save_path)
+    
     print ("Reading Files")
 
 

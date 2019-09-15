@@ -32,7 +32,7 @@ def CA_RSCU(allseq,allseq_name,The_Genetic_Codes_number=1):
 
     sequ = str(allseq)
 
-    allseqstr, allseqstr_1  = tee(sequ[i: i+3] for i in range(0, len(sequ), 3))
+    allseqstr, allseqstr_1  = tee(sequ[i: i+3] for i in range(0, len(sequ), 3) if len(sequ[i: i+3]) == 3)
 
     qcodontable = ( i for i in qcodontable)
     dic2 = {}

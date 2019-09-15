@@ -18,7 +18,7 @@ def P2_index(sequ , wwc = False, sst = False, wwy = False, ssy = False, p2 = Fal
     """
     import re
     sequ = str(sequ)
-    codon = (sequ[i: i+3] for i in range(0, len(sequ), 3))
+    codon = (sequ[i: i+3] for i in range(0, len(sequ), 3) if len(sequ[i: i+3]) == 3)
 
     WWC = 0
     SST = 0
