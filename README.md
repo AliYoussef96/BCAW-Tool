@@ -36,7 +36,7 @@ For more details about  codon usage bias , and the equations used in BCAWT [see]
 
 **Using pip**
 
-```
+```python
 pip install BCAWT
 ```
 
@@ -66,7 +66,8 @@ then run ( It will automatically run a test on the results files ):
 
 ```python
 from BCAWT import BCAWT_auto_test
-BCAWT_auto_test.auto_test(["Ecoli.fasta"])
+path = "Test_folder" # or any!!
+BCAWT_auto_test.auto_test(path)
 BCAWT_auto_test.auto_check_files()
 ```
 
@@ -83,7 +84,7 @@ BCAWT.BCAW(['Ecoli.fasta'],'result_folder',genetic_code_=11,Auto=True)
 
 main_fasta_file (list): list of string of the file's path or file-like object
 
-save_folder_name (str): folder name where the result will be saved
+save_path (str): absolute path to the directory to save the result in, default = the current directory
 
 ref_fasta_file (list): list of string of the file's path or file-like object, default = None
 
