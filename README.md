@@ -68,7 +68,7 @@ then run ( It will automatically run a test on the results files ):
 from BCAWT import BCAWT_auto_test
 path = "Test_folder" # or any!!
 BCAWT_auto_test.auto_test(path)
-BCAWT_auto_test.auto_check_files()
+BCAWT_auto_test.auto_check_files(path)
 ```
 
 #### Main Usage
