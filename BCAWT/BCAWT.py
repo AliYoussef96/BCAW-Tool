@@ -56,7 +56,6 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
     import time
     from BCAWT import GRAVY_AROMO
     import sys
-    import platform
     from pathlib import Path
 
     warnings.filterwarnings("ignore", category=RuntimeWarning)
