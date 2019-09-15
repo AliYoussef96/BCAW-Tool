@@ -68,6 +68,7 @@ then run ( It will automatically run a test on the results files ):
 from BCAWT import BCAWT_auto_test
 path = "Test_folder" # or any!!
 BCAWT_auto_test.auto_test(path)
+#processing....
 BCAWT_auto_test.auto_check_files(path)
 ```
 
@@ -75,7 +76,7 @@ BCAWT_auto_test.auto_check_files(path)
 
 ```python
 from BCAWT import BCAWT
-BCAWT.BCAW(['Ecoli.fasta'],'result_folder',genetic_code_=11,Auto=True)
+BCAWT.BCAW(['Ecoli.fasta'],'save_path',genetic_code_=11,Auto=True)
 
 ```
 ## Input
