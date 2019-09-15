@@ -26,7 +26,7 @@ def ACTG3(sequ , A = False , T = False , C = False, G = False):
     G3 = 0
     C3 = 0
     sequ = str(sequ)
-    codon, codon_1 = tee(sequ[i: i + 3] for i in range(0, len(sequ), 3))
+    codon, codon_1 = tee(sequ[i: i + 3] for i in range(0, len(sequ), 3) if len(sequ[i: i + 3]) == 3)
 
     lenght_codon = sum(1 for _ in codon_1)
 
