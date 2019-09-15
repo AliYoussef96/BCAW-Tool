@@ -77,7 +77,6 @@ BCAWT_auto_test.auto_check_files(path)
 ```python
 from BCAWT import BCAWT
 BCAWT.BCAW(['Ecoli.fasta'],'save_path',genetic_code_=11,Auto=True)
-
 ```
 ## Input
 
