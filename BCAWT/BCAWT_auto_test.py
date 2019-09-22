@@ -6,7 +6,7 @@ def auto_test(path=str(), test_file=str()):
     Args:
 
         path: absolute path to the directory to save the result in
-        test_file: Absolute path to the fasta file that will be tested 
+        test_file: absolute path to the fasta file that will be tested 
 
     Returns:
         None
