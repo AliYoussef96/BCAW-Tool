@@ -1,10 +1,12 @@
-def auto_test(path=str()):
+def auto_test(path=str(), test_file=str()):
     '''
 
     Run a demo test with 23 results ( see the documentation for more details about the expected output )
 
     Args:
+
         path: absolute path to the directory to save the result in
+        test_file: Absolute path to the fasta file that will be tested 
 
     Returns:
         None
@@ -13,9 +15,11 @@ def auto_test(path=str()):
 
     if path == str():
         raise TypeError ("Must specify a path to save result in")
+    if test_file == str():
+        raise TypeError ("Must specify a test_file path to fasta file")
 
     from BCAWT import BCAWT
-    file  =  open("Ecoli.fasta", "r")
+    file  =  open(test_file, "r")
 
     BCAWT.BCAW(main_fasta_file = [file] , save_path= path, Auto=True)
 
@@ -47,3 +51,5 @@ def auto_check_files(path):
         print ("Test is completed 'successfully'")
     else:
         print ("Something going wrong please, see the documentation or contact the developer")
+
+
