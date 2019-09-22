@@ -66,10 +66,11 @@ then run ( It will automatically run a test on the results files ):
 
 ```python
 from BCAWT import BCAWT_auto_test
-path = "Test_folder" # or any!!
-BCAWT_auto_test.auto_test(path)
+path = "Test_folder" # absolute path to the directory to save the result in
+test_fasta = "Test_fasta_file" # absolute path to the fasta file that will be tested 
+BCAWT_auto_test.auto_test(path, test_fasta)
 #processing....
-BCAWT_auto_test.auto_check_files(path)
+BCAWT_auto_test.auto_check_files(path) # note: this test assumes that in the result folder nothing except the result files form the above function.
 ```
 
 #### Main Usage
