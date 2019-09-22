@@ -26,9 +26,10 @@ Various tools are available to analyze and measure CUB, but they lack some impor
 
 BCAW tool was developed using python 3.7 with built in and third-party packages [@Lee2018]. The usage of BCAW Tool is made to be very easy where users have only to input a fasta format file containing genes to be analyzed, and variety of analyses will be performed.
 
-```
+```python
 from BCAWT import BCAWT
-BCAWT.BCAW(['Ecoli.fasta'],'result_folder',genetic_code_=11,Auto=True)
+BCAWT.BCAW(['Ecoli.fasta'],'save_path',genetic_code_=11,Auto=True)
+# processing...
 ```
 
 The expected outputs from the BCAW tool could be divided into three groups. The first one is data in CSV format described in (Table 1), the second group is plots summarized in (Fig 1), and the last one is text files each contains a different result for a different statistical test. The equations used for analyzing CUB in the tool, and the API are reported in the BCAWT's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
