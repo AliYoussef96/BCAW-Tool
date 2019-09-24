@@ -58,6 +58,6 @@ Also, it returns 11 plot  ( Fig 1 ), so one could interpret the results easily.
 
 **Fig 1: All output plots from BCAW tool analysis for coding sequence from Escherichia coli.**
 .
-![Fig 1](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Plots/All%20plots.jpg)
+![Fig 1](https://raw.githubusercontent.com/AliYoussef96/BCAW-Tool/master/Plots/All%20plots.jpg)
 
 # References
