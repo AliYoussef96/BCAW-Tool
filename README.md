@@ -1,4 +1,4 @@
-# BCAW: Automated tool for codon usage bias analysis for molecular evolution
+# BCAWT: Automated tool for codon usage bias analysis for molecular evolution
 
 [![Build Status](https://travis-ci.org/AliYoussef96/BCAW-Tool.svg?branch=master)](https://travis-ci.org/AliYoussef96/BCAW-Tool)
 [![Documentation Status](https://readthedocs.org/projects/bcaw-tools-documentation/badge/?version=latest)](https://bcaw-tools-documentation.readthedocs.io/en/latest/?badge=latest)
