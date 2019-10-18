@@ -24,7 +24,7 @@ Various tools are available to analyze and measure CUB, but they lack some impor
  
 # Implementation
 
-BCAWT was developed using python 3.7 with built-in and third-party packages [@Lee2018]. The usage of BCAWT is made to be very easy where users have only to input a fasta format file containing genes to be analyzed, and variety of analyses will be performed.
+BCAWT was developed using python 3.7 with built-in and third-party packages [@Lee2018]. The BCAWT API is easy to be used. For example, to analysis coding sequences within Ecoli.fasta, save the results to a folder named save_path and choosing genetic code number 11 for bacteria: 
 
 ```python
 from BCAWT import BCAWT
@@ -32,7 +32,7 @@ BCAWT.BCAW(['Ecoli.fasta'],'save_path',genetic_code_=11,Auto=True)
 # processing...
 ```
 
-The expected outputs from the BCAWT can be divided into three groups. The first one is data in CSV format described in (Table 1), the second group is plots summarized in (Fig 1), and the last one is text files each contains a different result for a different statistical test. The equations used for analyzing CUB in the tool, and the API are reported in the BCAW's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
+The expected outputs from the BCAWT can be divided into three groups. The first group is data in the CSV format (see Table 1), the second group is plots (summarized in Fig 1), and the last group is text files, whereby each text file contains results for a different statistical test. The equations used for analyzing CUB in the tool, and the API are reported in the BCAW's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
 
 The advantages of BCAWT over existing tools are; 1) the automated workflow, 2) the ability to handle large numbers of genes, 3) the method used to determine optimal codons, named the correlation method, is only available in the BCAWT, 4) visualization and plotting capability, including the creation of violin plots for nucleotide contents, removing the need for other plotting software.
 
