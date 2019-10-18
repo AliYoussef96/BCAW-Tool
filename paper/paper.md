@@ -24,7 +24,7 @@ Various tools are available to analyze and measure CUB, but they lack some impor
  
 # Implementation
 
-BCAWT was developed using python 3.7 with built-in and third-party packages [@Lee2018]. The BCAWT API is easy to be used. For example, to analysis coding sequences within Ecoli.fasta, save the results to a folder named save_path and choosing genetic code number 11 for bacteria: 
+BCAWT was developed using python 3.7 with built-in and third-party packages [@Lee2018]. BCAWT API is easy to use. For example, to analyze genes coding sequence within Ecoli.fasta, save the results to a folder named save_path and choosing genetic code for bacteria: 
 
 ```python
 from BCAWT import BCAWT
