@@ -24,7 +24,7 @@ Various tools are available to analyze and measure CUB, but they lack some impor
  
 # Implementation
 
-BCAWT was developed using python 3.7 with built-in and third-party packages [@Lee2018]. BCAWT API is easy to use. For example, to analyze genes coding sequence within Ecoli.fasta, save the results to a folder named save_path and choosing genetic code for bacteria: 
+BCAWT was developed using python 3.7 with built-in and third-party packages [@Lee2018]. BCAWT API is easy to use. For example, the following code snippet shows how to analyze genes for a coding sequence within the file `Ecoli.fasta`, for a genetic code specified, and to save the results to a folder named save_path
 
 ```python
 from BCAWT import BCAWT
@@ -32,9 +32,9 @@ BCAWT.BCAW(['Ecoli.fasta'],'save_path',genetic_code_=11,Auto=True)
 # processing...
 ```
 
-The expected outputs from the BCAWT can be divided into three groups. The first group is data in the CSV format (see Table 1), the second group is plots (summarized in Fig 1), and the last group is text files, whereby each text file contains results for a different statistical test. The equations used for analyzing CUB in the tool, and the API are reported in the BCAW's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
+The expected outputs from BCAWT can be divided into three groups. The first group is data in the CSV format (see Table 1), the second group is plots (summarized in Fig 1), and the last group is text files, whereby each text file contains results for a different statistical test. The equations used for analyzing CUB in the tool, and the API are reported in the BCAWT's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
 
-The advantages of BCAWT over existing tools are; 1) the automated workflow, 2) the ability to handle large numbers of genes, 3) the method used to determine optimal codons, named the correlation method, is only available in the BCAWT, 4) visualization and plotting capability, including the creation of violin plots for nucleotide contents, removing the need for other plotting software.
+The advantages of BCAWT over existing tools are; 1) the automated workflow, 2) the ability to handle large numbers of genes, 3) the method used to determine optimal codons, named the correlation method, is only available in BCAWT, 4) visualization and plotting capability, including the creation of violin plots for nucleotide contents, removing the need for other plotting software.
 
 # Output summary
 
@@ -56,8 +56,7 @@ BCAWT returns CSV files containing the CUB indices output (Table 1).
 Furthermore, BCAWT returns 11 plots (Fig 1), enabling an easy interpretation of the results.
 
 
-**Fig 1: All output plots from BCAWT analysis for genes coding sequence from Escherichia coli.**
 
-![Fig 1](https://raw.githubusercontent.com/AliYoussef96/BCAW-Tool/master/Plots/all.png)
+![All output plots from BCAWT analysis for genes coding sequence from Escherichia coli](https://raw.githubusercontent.com/AliYoussef96/BCAW-Tool/master/Plots/all.png)
 
 # References
