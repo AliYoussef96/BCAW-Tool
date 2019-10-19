@@ -56,7 +56,7 @@ BCAWT returns CSV files containing the CUB indices output (Table 1).
 Furthermore, BCAWT returns 11 plots (Fig 1), enabling an easy interpretation of the results.
 
 
-**Fig 1: All output plots from BCAWT analysis for coding sequence from Escherichia coli.**
+**Fig 1: All output plots from BCAWT analysis for genes coding sequence from Escherichia coli.**
 
 ![Fig 1](https://raw.githubusercontent.com/AliYoussef96/BCAW-Tool/master/Plots/all.png)
 
