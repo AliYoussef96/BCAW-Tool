@@ -4,9 +4,6 @@
 [![Documentation Status](https://readthedocs.org/projects/bcaw-tools-documentation/badge/?version=latest)](https://bcaw-tools-documentation.readthedocs.io/en/latest/?badge=latest)
 [![PyPI version](https://badge.fury.io/py/BCAWT.svg)](https://badge.fury.io/py/BCAWT)
 [![status](http://joss.theoj.org/papers/5c17f813c2eca6b9d7c4ecf5d2ea97e9/status.svg)](http://joss.theoj.org/papers/5c17f813c2eca6b9d7c4ecf5d2ea97e9)
-[![DOI](https://zenodo.org/badge/189912439.svg)](https://zenodo.org/badge/latestdoi/189912439)
-
-
 
 
 ## Statement of Need
@@ -140,3 +137,7 @@ For [NCBI Genomes Download (FTP) FAQ](https://www.ncbi.nlm.nih.gov/genome/doc/ft
 2. For more information about the equations used to analyze CUB in the BCAW tool >> [Equations](https://bcaw-tools-documentation.readthedocs.io/en/latest/intro.html#equations-used-for-codon-usage-bias-analysis)
 3. For more information about the output >> [Output](https://bcaw-tools-documentation.readthedocs.io/en/latest/Table_output.html)
 4. For more information about the abbreviations used >> [Abbreviations table](https://github.com/AliYoussef96/BCAW-Tool/blob/master/Abbreviations.md)
+
+## Citation
+
+Anwar, (2019). BCAWT: Automated tool for codon usage bias analysis for molecular evolution. Journal of Open Source Software, 4(42), 1500, https://doi.org/10.21105/joss.01500
