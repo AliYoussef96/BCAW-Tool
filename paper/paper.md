@@ -32,7 +32,7 @@ BCAWT.BCAW(['Ecoli.fasta'],'save_path',genetic_code_=11,Auto=True)
 # processing...
 ```
 
-The expected outputs from BCAWT can be divided into three groups. The first group is data in the CSV format (see Table 1), the second group is plots (summarized in Fig 1), and the last group is text files, whereby each text file contains results for a different statistical test. The equations used for analyzing CUB in the tool, and the API are reported in the BCAWT's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
+The expected outputs from BCAWT can be divided into three groups. The first group is data in the CSV format (see Table 1), the second group is plots (summarized in Fig 1), and the last group is text files, whereby each text file contains results for a different statistical test. The equations used for analyzing CUB in the tool, and the API are reported in BCAWT's [documentation](https://bcaw-tools-documentation.readthedocs.io/en/latest/).
 
 The advantages of BCAWT over existing tools are; 1) the automated workflow, 2) the ability to handle large numbers of genes, 3) the method used to determine optimal codons, named the correlation method, is only available in BCAWT, 4) visualization and plotting capability, including the creation of violin plots for nucleotide contents, removing the need for other plotting software.
 
