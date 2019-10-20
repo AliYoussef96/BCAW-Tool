@@ -18,6 +18,7 @@ Guide
    Contribution
    License
    help
+   Citation
    
    
    
