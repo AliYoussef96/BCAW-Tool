@@ -114,7 +114,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
                     seq_main_seq_modifi_ = str(seq_ref.seq)
 
                 all_ref_seq.append( seq_main_seq_modifi_ )
-
+        if type(input_the_ref_fasta_file) != str:
             input_the_ref_fasta_file.seek(0)
 
 
