@@ -6,6 +6,10 @@
 [![status](http://joss.theoj.org/papers/5c17f813c2eca6b9d7c4ecf5d2ea97e9/status.svg)](http://joss.theoj.org/papers/5c17f813c2eca6b9d7c4ecf5d2ea97e9)
 
 
+## BCAWT updates.
+
+Now you can run BCAW tool using a GUI software that can work on any operating system. It is very easy to use. For more information and to download it: [BCAWT-GUI](https://github.com/AliYoussef96/BCAWT-GUI).
+
 ## Statement of Need
 
 There are no tools available enable users to run a whole automated workflow for codon usage bias analysis. Using python 3.7 BCAW Tool ( Bio Codon Analysis Workflow Tool ) was developed to address this problem.
