@@ -19,8 +19,8 @@ sys.path.insert(0, os.path.abspath("../BCAWT"))
 # -- Project information -----------------------------------------------------
 
 project = 'BCAW tool'
-copyright = '2019, Ali Mostafa'
-author = 'Ali Mostafa'
+copyright = '2019, Ali Mostafa Anwar'
+author = 'Ali Mostafa Anwar'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'
