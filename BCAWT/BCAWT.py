@@ -29,11 +29,11 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
 
     import Bio
     from Bio import SeqIO
-    from Bio.Alphabet import IUPAC
+    #from Bio.Alphabet import IUPAC
     from Bio.Seq import Seq
     from Bio.SeqUtils import GC
     from Bio.Data import CodonTable
-    from Bio.Alphabet import generic_dna
+    #from Bio.Alphabet import generic_dna
     import pandas as pd
     from pandas import DataFrame
     from BCAWT import GC123
@@ -126,6 +126,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
         try:
             input_the_main_fasta_file_only = os.path.basename(input_the_main_fasta_file)
             input_the_main_fasta_file_result = input_the_main_fasta_file_only.replace('.fasta', 'ENc.enc')
+
         except:
             input_the_main_fasta_file_only = os.path.basename(input_the_main_fasta_file.name)
             input_the_main_fasta_file_result = input_the_main_fasta_file_only.replace('.fasta', 'ENc.enc')
@@ -578,3 +579,4 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
                      "axis 2 Vs. AROMA = " + str(corr_CA_AROMO2[0]) + " ,p-value = " + str(corr_CA_AROMO2[1]) + "\n" )
 
         print ("Results Saved")
+

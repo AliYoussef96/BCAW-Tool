@@ -14,7 +14,7 @@ def CA_RSCU(allseq,allseq_name,The_Genetic_Codes_number=1):
     from Bio.Data import CodonTable
     from Bio.Seq import Seq
     import re
-    from Bio.Alphabet import generic_dna
+    #from Bio.Alphabet import generic_dna
     import pandas as pd
     from pandas import DataFrame
     from itertools import tee
@@ -36,7 +36,7 @@ def CA_RSCU(allseq,allseq_name,The_Genetic_Codes_number=1):
 
     qcodontable = ( i for i in qcodontable)
     dic2 = {}
-    allseqstr2 = Seq('', generic_dna)
+    allseqstr2 = Seq('')
     for i in allseqstr:
         allseqstr2 += i
     aminoacid2 = allseqstr2.translate(table = The_Genetic_Codes_number , stop_symbol ='')
