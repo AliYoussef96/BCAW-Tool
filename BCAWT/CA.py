@@ -73,7 +73,7 @@ def CA(file):
     #     f.write("Total Inertia = " + str(ca.total_inertia_))
 
     #plot For genes
-    plt.style.use('seaborn-dark-palette')
+    plt.style.use('seaborn-v0_8-dark-palette')
     fig = plt.figure()
 
     plt.xlabel("Axis 1")
