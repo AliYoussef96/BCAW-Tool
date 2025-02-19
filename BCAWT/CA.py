@@ -90,7 +90,7 @@ def CA(file):
     plt.savefig(save_file_name__ca_plot) # return plot file for gene ca result
 
     #for codons
-    plt.style.use('seaborn-dark-palette')
+    plt.style.use('seaborn-v0_8-dark-palette')
     fig3 = plt.figure()
 
 
