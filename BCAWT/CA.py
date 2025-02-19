@@ -45,7 +45,7 @@ def CA(file):
     #ca.total_inertia_ #total inertia
     #ca.explained_inertia_ #inertia for each axis
     #inertia = ca.explained_inertia_
-    ca.eigenvalues_summary.to_csv("CA.Eigenvalues.csv")
+    ca.eigenvalues_summary.to_csv(f"{file}CA.Eigenvalues.csv")
 
     #save information
     file_genes = file.replace(".csv",'')
