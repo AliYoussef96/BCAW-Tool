@@ -409,7 +409,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
     #### Step3 Plots  ###############
     #################################
         print (">>> Ploting")
-        plt.style.use('seaborn-dark-palette')
+        plt.style.use('seaborn-v0_8-dark-palette')
     #ENc Vs CAI
         fig = plt.figure()
         plt.xlabel("ENc")
