@@ -41,7 +41,7 @@ For more details about  codon usage bias , and the equations used in BCAWT [see]
 **Using pip**
 
 ```python
-pip install BCAWT
+pip install git+https://github.com/AliYoussef96/BCAW-Tool.git
 ```
 
 **Note:** Python >=3.7 is required.
