@@ -21,7 +21,7 @@ REQUIRES_PYTHON = '>=3.7.0'
 VERSION = '1.0.5'
 
 # What packages are required for this module to be executed?
-REQUIRED = ['biopython', 'pandas', 'CAI','scipy','matplotlib','numpy','prince']
+REQUIRED = ['biopython', 'pandas', 'cai2','scipy','matplotlib','numpy','prince']
 
 # What packages are optional?
 EXTRAS = {}
