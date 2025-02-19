@@ -49,7 +49,7 @@ def op_corr(ENc_file_name,RSCU_file_name):
             df_corr['family_number'] = codon_number_in_family
             df_corr['P_value_/n'] = 0.05 / codon_number_in_family
             #df_corr_append['Optimal Codon'] = ''
-            df_corr_append = df_corr_append.append(df_corr, ignore_index=True, sort=False)
+            df_corr_append = pd.concat([df_corr_append, df_corr], ignore_index=True, sort=False)
 
     df_corr_append.fillna(0,inplace=True)
     df_corr_append.sort_values(["Amino Acid"], inplace=True)
@@ -68,7 +68,7 @@ def op_corr(ENc_file_name,RSCU_file_name):
 
         opetimal_codons = df_lessthan_p_value[min_corr]
 
-        df_final_family = df_final_family.append(opetimal_codons, ignore_index=True, sort=False)
+        df_final_family = pd.concat([df_final_family, opetimal_codons], ignore_index=True, sort=False)
 
     df_final_family = df_final_family[df_final_family["Amino Acid"] != "W"]
     df_final_family = df_final_family[df_final_family["r"] < 0]
