@@ -1,6 +1,6 @@
 biopython
 pandas
-CAI
+cai2
 scipy
 matplotlib
 numpy
