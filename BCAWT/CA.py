@@ -45,7 +45,6 @@ def CA(file):
     #ca.total_inertia_ #total inertia
     #ca.explained_inertia_ #inertia for each axis
     #inertia = ca.explained_inertia_
-    ca.eigenvalues_summary.to_csv(f"{file}CA.Eigenvalues.csv")
 
     #save information
     file_genes = file.replace(".csv",'')
@@ -115,6 +114,7 @@ def CA(file):
     read_genes_file = pd.read_csv(file_genes)
     read_genes_file.rename(columns={genes.columns[0]: 'gene id', genes.columns[1]: 'axis 1', genes.columns[2]: 'axis 2'}, inplace=True)
 
+    ca.eigenvalues_summary.to_csv(f"{file}CA.Eigenvalues.csv")
 
 
     return read_genes_file
