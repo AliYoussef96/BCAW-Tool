@@ -254,7 +254,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi = str(seq_main.seq)
                 df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=all_ref_seq,genetic_code = genetic_code_)]
-                df_for_each_file_CAI = df_for_each_file_CAI.(df_CAI, ignore_index=True, sort=False)
+                df_for_each_file_CAI = df_for_each_file_CAI.concat(df_CAI, ignore_index=True, sort=False)
 
             ### cai if == -auto
 
