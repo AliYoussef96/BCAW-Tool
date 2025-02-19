@@ -18,7 +18,7 @@ URL = 'https://github.com/AliYoussef96/BCAW-Tool'
 EMAIL = 'ali.mo.anwar@std.agr.cu.edu.eg'
 AUTHOR = 'Ali Mostafa'
 REQUIRES_PYTHON = '>=3.7.0'
-VERSION = '2.0.0'
+VERSION = '2.0.1'
 
 # What packages are required for this module to be executed?
 REQUIRED = ['biopython', 'pandas', 'cai2','scipy','matplotlib','numpy','prince']
