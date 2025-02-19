@@ -230,7 +230,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
             df_ATCG['GC2'] = GC123.GC2(seq_main.seq)
             df_ATCG['GC3'] = GC123.GC3(seq_main.seq)
             df_ATCG['GC12'] = GC123.GC12(seq_main.seq)
-            df_ATCG['AT'] = abs(GC(seq_main.seq) - 100)
+            df_ATCG['AT'] = abs(gc_fraction(seq_main.seq) - 100)
             df_ATCG['AT3'] = abs(GC123.GC3(seq_main.seq) - 100)
             df_ATCG['A3']  = ATCG3.ACTG3(seq_main.seq , A = True)
             df_ATCG['T3'] = ATCG3.ACTG3(seq_main.seq, T=True)
