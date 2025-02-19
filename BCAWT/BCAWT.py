@@ -239,7 +239,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
             df_ATCG["GRAVY"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, genetic_code_, G=True)
             df_ATCG["AROMA"] = GRAVY_AROMO.GRAvy_ARomo(seq_main.seq, genetic_code_, A=True)
             df_ATCG["Gene Length"] = len(str(seq_main.seq))
-            df_for_each_file_ATCG = df_for_each_file_ATCG.concat(df_ATCG, ignore_index=True, sort=False)
+            df_for_each_file_ATCG = pd.concat([df_for_each_file_ATCG, df_ATCG], ignore_index=True, sort=False)
 
             # if not -auto 1 CAI
 
@@ -254,7 +254,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi = str(seq_main.seq)
                 df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=all_ref_seq,genetic_code = genetic_code_)]
-                df_for_each_file_CAI = df_for_each_file_CAI.concat(df_CAI, ignore_index=True, sort=False)
+                df_for_each_file_CAI = pd.concat([df_for_each_file_CAI, df_CAI], ignore_index=True, sort=False)
 
             ### cai if == -auto
 
@@ -269,7 +269,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
                 elif lenghth_seq == 0:
                     seq_main_seq_modifi = str(seq_main.seq)
                 df_CAI['CAI'] = [CAI(seq_main_seq_modifi, reference=list_ref,genetic_code = genetic_code_)]
-                df_for_each_file_CAI = df_for_each_file_CAI.concat(df_CAI, ignore_index=True, sort=False)
+                df_for_each_file_CAI = pd.concat([df_for_each_file_CAI, df_CAI], ignore_index=True, sort=False)
 
             #4 p2 index
             df_p2 = pd.DataFrame()
@@ -279,14 +279,14 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
             df_p2['WWY'] = [P2_index.P2_index(seq_main.seq, wwy=True)]
             df_p2['SSY'] = [P2_index.P2_index(seq_main.seq, ssy=True)]
             df_p2['P2'] = [P2_index.P2_index(seq_main.seq, p2=True)]
-            df_for_each_file_P2 = df_for_each_file_P2.concat(df_p2, ignore_index=True, sort=False)
+            df_for_each_file_P2 = pd.concat([df_for_each_file_P2, df_p2], ignore_index=True, sort=False)
 
             # PR2 plot
             df_pr2 = pd.DataFrame()
             df_pr2['gene id'] = [seq_main.id]
             df_pr2['abscissa'] = PR2_plot_data.PR2_plot(seq_main.seq, a = True)
             df_pr2['ordinate'] = PR2_plot_data.PR2_plot(seq_main.seq, o = True)
-            df_for_each_file_PR2 = df_for_each_file_PR2.concat(df_pr2, ignore_index=True, sort=False)
+            df_for_each_file_PR2 = pd.concat([df_for_each_file_PR2, df_pr2], ignore_index=True, sort=False)
 
 
             #CA_RSCU
