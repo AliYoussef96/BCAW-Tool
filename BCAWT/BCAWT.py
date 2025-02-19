@@ -31,7 +31,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
     from Bio import SeqIO
     #from Bio.Alphabet import IUPAC
     from Bio.Seq import Seq
-    from Bio.SeqUtils import GC
+    from Bio.SeqUtils import gc_fraction
     from Bio.Data import CodonTable
     #from Bio.Alphabet import generic_dna
     import pandas as pd
@@ -225,7 +225,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
             # 0 ATCG
             df_ATCG = pd.DataFrame()
             df_ATCG['gene id'] = [seq_main.id]
-            df_ATCG['GC'] = GC(seq_main.seq)
+            df_ATCG['GC'] = gc_fraction(seq_main.seq)
             df_ATCG['GC1'] = GC123.GC1(seq_main.seq)
             df_ATCG['GC2'] = GC123.GC2(seq_main.seq)
             df_ATCG['GC3'] = GC123.GC3(seq_main.seq)
