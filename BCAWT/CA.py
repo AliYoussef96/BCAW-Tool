@@ -30,7 +30,7 @@ def CA(file):
         n_iter=3,
         copy=True,
         check_input=True,
-        engine='auto',
+        engine='scipy',
         random_state=42
         )
     df.columns.rename('Gene Name', inplace=True)
