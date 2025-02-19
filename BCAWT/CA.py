@@ -42,8 +42,8 @@ def CA(file):
     genes = ca.column_coordinates(df) #for genes
 
     #ca.eigenvalues_
-    ca.total_inertia_ #total inertia
-    ca.explained_inertia_ #inertia for each axis
+    #ca.total_inertia_ #total inertia
+    #ca.explained_inertia_ #inertia for each axis
     #inertia = ca.explained_inertia_
     ca.eigenvalues_summary.to_csv("CA.Eigenvalues.csv")
 
