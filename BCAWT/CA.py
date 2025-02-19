@@ -44,7 +44,8 @@ def CA(file):
     #ca.eigenvalues_
     ca.total_inertia_ #total inertia
     ca.explained_inertia_ #inertia for each axis
-    inertia = ca.explained_inertia_
+    #inertia = ca.explained_inertia_
+    ca.eigenvalues_summary.to_csv("CA.Eigenvalues.csv")
 
     #save information
     file_genes = file.replace(".csv",'')
@@ -61,18 +62,15 @@ def CA(file):
     codons.rename(columns={codons.columns[0]: 'axis 1', codons.columns[1]: 'axis 2', codons.columns[2]: 'axis 3', codons.columns[3]: 'axis 4'},inplace=True)
     codons.to_csv(file_codons, sep=',', index=True, header=True) # return csv file for codon ca result
 
-
-    file_inertia = file.replace('.csv','.txt')
-
-    with open(file_inertia, 'a') as f:
-        f.write("explained inertia" + "\n")
-    for i in range(len(inertia)):
-        i_count = i + 1
-        with open(file_inertia,'a') as f:
-            f.write ("axis " + str(i_count) + " = " + str(inertia[i]) + "\n" )
-
-    with open(file_inertia,'a') as f:
-        f.write("Total Inertia = " + str(ca.total_inertia_))
+    #file_inertia = file.replace('.csv','.txt')
+    # with open(file_inertia, 'a') as f:
+    #     f.write("explained inertia" + "\n")
+    # for i in range(len(inertia)):
+    #     i_count = i + 1
+    #     with open(file_inertia,'a') as f:
+    #         f.write ("axis " + str(i_count) + " = " + str(inertia[i]) + "\n" )
+    # with open(file_inertia,'a') as f:
+    #     f.write("Total Inertia = " + str(ca.total_inertia_))
 
     #plot For genes
     plt.style.use('seaborn-dark-palette')
