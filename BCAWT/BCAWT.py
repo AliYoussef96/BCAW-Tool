@@ -39,7 +39,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
     from BCAWT import GC123
     from BCAWT import ATCG3
     from BCAWT import ENc
-    from CAI import CAI
+    from cai2 import CAI
     import scipy
     from scipy import stats
     from BCAWT import PR2_plot_data
