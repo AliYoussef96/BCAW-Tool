@@ -139,7 +139,7 @@ def BCAW(main_fasta_file,save_path=str(),ref_fasta_file=None,genetic_code_=1,Aut
 
 
         ENc_dataframe = pd.read_csv(input_the_main_fasta_file_result, sep='\t')
-        ENc_dataframe.drop(['len', 'mo3'], 1, inplace=True)
+        ENc_dataframe.drop(['len', 'mo3'], axis = 1, inplace=True)
         ENc_dataframe.rename(index=str, columns={'id': 'gene id', 'eq2Sun': 'ENc'}, inplace=True)
 
 
