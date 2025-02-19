@@ -25,7 +25,7 @@ For more details about  codon usage bias , and the equations used in BCAWT [see]
 
 2- pandas
 
-3- CAI
+3- cai2
 
 4- scipy
 
